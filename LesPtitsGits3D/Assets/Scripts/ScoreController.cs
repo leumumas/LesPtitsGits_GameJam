@@ -9,13 +9,29 @@ public class ScoreController : MonoBehaviour
 	public Text HighScore2Text;
 	public Text HighScore3Text;
 
-	int currentScore = 0;
+	long currentScore;
 
 	void Start()
 	{
 		currentScore = 0;
 		currentScoreText.text = currentScore == 0 ? "" : currentScore.ToString();
 		UpdateHighScoreVisuals();
+
+		if (PlayerPrefs.GetString("HighScore3", "") == "")
+		{
+			PlayerPrefs.SetString("HighScore3", "0");
+
+			if (PlayerPrefs.GetString("HighScore2", "") == "")
+			{
+				PlayerPrefs.SetString("HighScore2", "0");
+
+				if (PlayerPrefs.GetString("HighScore", "") == "")
+				{
+					PlayerPrefs.SetString("HighScore", "0");
+				}
+			}
+		}
+
 	}
 
 	public void AddCasualtiesToScore(int casualties)
@@ -23,7 +39,7 @@ public class ScoreController : MonoBehaviour
 		currentScore += casualties;
 		currentScoreText.text = currentScore.ToString();
 
-		if (HighScoreWasBested())
+		if (CheckIfHighScoreWasBested())
 		{
 			UpdateHighScoreVisuals();
 		}
@@ -31,26 +47,26 @@ public class ScoreController : MonoBehaviour
 
 	private void UpdateHighScoreVisuals()
 	{
-		HighScoreText.text = PlayerPrefs.GetInt("HighScore", 0) == 0 ? "" : PlayerPrefs.GetInt("HighScore", 0).ToString();
-		HighScore2Text.text = PlayerPrefs.GetInt("HighScore2", 0) == 0 ? "" : PlayerPrefs.GetInt("HighScore2", 0).ToString();
-		HighScore3Text.text = PlayerPrefs.GetInt("HighScore3", 0) == 0 ? "" : PlayerPrefs.GetInt("HighScore3", 0).ToString();
+		HighScoreText.text = PlayerPrefs.GetString("HighScore", "0");
+		HighScore2Text.text = PlayerPrefs.GetString("HighScore2", "0");
+		HighScore3Text.text = PlayerPrefs.GetString("HighScore3", "0");
 	}
 
-	private bool HighScoreWasBested()
+	private bool CheckIfHighScoreWasBested()
 	{
-		if (currentScore > PlayerPrefs.GetInt("HighScore3"))
+		if (currentScore > long.Parse(PlayerPrefs.GetString("HighScore3")))
 		{
-			if (currentScore > PlayerPrefs.GetInt("HighScore2"))
+			if (currentScore > long.Parse(PlayerPrefs.GetString("HighScore2")))
 			{
-				if (currentScore > PlayerPrefs.GetInt("HighScore"))
+				if (currentScore > long.Parse(PlayerPrefs.GetString("HighScore")))
 				{
-					PlayerPrefs.SetInt("HighScore", currentScore);
+					PlayerPrefs.SetString("HighScore", currentScore.ToString());
 					return true;
 				}
-				PlayerPrefs.SetInt("HighScore2", currentScore);
+				PlayerPrefs.SetString("HighScore2", currentScore.ToString());
 				return true;
 			}
-			PlayerPrefs.SetInt("HighScore3", currentScore);
+			PlayerPrefs.SetString("HighScore3", currentScore.ToString());
 			return true;
 		}
 
@@ -61,8 +77,8 @@ public class ScoreController : MonoBehaviour
 	{
 		if (Input.GetMouseButtonUp(0))
 		{
-			Debug.Log("Click! + 10  casualties");
-			AddCasualtiesToScore(1000);
+			Debug.Log("Click! + 1 000 000 000  casualties");
+			AddCasualtiesToScore(1000000000);
 		}
 
 		if (Input.GetKeyDown("r"))
