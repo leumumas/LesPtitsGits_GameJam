@@ -5,10 +5,14 @@ using System.Collections.Generic;
 
 public class EarthSpinScript : MonoBehaviour
 {
-    public float speed = 10f;
-    public float speedZoom = 10f;
-    public float CloseValueCamera = -1.5f;
-    public float FarValueCamera = -5f;
+    [SerializeField]
+    private float speed = 10f;
+    [SerializeField]
+    private float speedZoom = 10f;
+    [SerializeField]
+    private float CloseValueCamera = -1.5f;
+    [SerializeField]
+    private float FarValueCamera = -4f;
 
     private Camera MainCamera;
 
