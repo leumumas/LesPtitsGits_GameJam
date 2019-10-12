@@ -24,6 +24,9 @@ public class EarthSpinScript : MonoBehaviour
     private Vector3 FarPosition;
     private Vector3 ClosePosition;
 
+    private RaycastHit raycastHit;
+    private Ray ray;
+
     private void Start()
     {
         MainCamera = Camera.main;
@@ -67,5 +70,11 @@ public class EarthSpinScript : MonoBehaviour
 
         transform.Rotate(Vector3.up, rotation * Time.deltaTime, Space.World);
         transform.Rotate(Vector3.right, translation * Time.deltaTime, Space.World);
+
+        ray = new Ray(MainCamera.transform.position, MainCamera.transform.forward);
+        if (Physics.Raycast(ray, out raycastHit))
+        {
+            Debug.Log(raycastHit.collider.name);
+        }
     }
 }
