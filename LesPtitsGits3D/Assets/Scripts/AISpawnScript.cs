@@ -12,6 +12,7 @@ public class AISpawnScript : MonoBehaviour
     private System.Random rnd = new System.Random();
 
     public GameObject boatPrefab;
+    public GameObject planePrefab;
     
 
     // Start is called before the first frame update
@@ -19,9 +20,9 @@ public class AISpawnScript : MonoBehaviour
     {
         spawnTimer = Time.deltaTime;
 
-        boatAiLocations = GameObject.FindGameObjectsWithTag("BoatLocation");
+        //boatAiLocations = GameObject.FindGameObjectsWithTag("BoatLocation");
         planeAiLocations = GameObject.FindGameObjectsWithTag("PlaneLocation");
-        carAiLocations = GameObject.FindGameObjectsWithTag("CarLocation");
+       // carAiLocations = GameObject.FindGameObjectsWithTag("CarLocation");
     }
 
     // Update is called once per frame
@@ -38,14 +39,19 @@ public class AISpawnScript : MonoBehaviour
     void SpawnMayhem()
     {
         int nbBoatsToSpawn = rnd.Next(0, 2);
-        int nbPlanesToSpawn = rnd.Next(0, 2);
+        int nbPlanesToSpawn = rnd.Next(1, 2);
         int nbCarsToSpawn = rnd.Next(0, 2);
 
-        SpawnBoats(nbBoatsToSpawn);
+        SpawnPlanes(nbPlanesToSpawn);
     }
 
     void SpawnBoats(int numberToSpawn)
     {
+        if(boatAiLocations.Length < numberToSpawn)
+        {
+            return;
+        }
+
         for (int i = 0; i < numberToSpawn; i++)
         {
             GameObject startPosition = boatAiLocations[rnd.Next(0, boatAiLocations.Length)];
@@ -60,7 +66,31 @@ public class AISpawnScript : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(lookAt);
             
             GameObject newBoat = Instantiate(boatPrefab, startPosition.transform.position, targetRotation);
-            newBoat.GetComponent<ShipMovement>().SetEndPosition(lookAt, endPosition.transform.position);
+            newBoat.GetComponent<BoatMovement>().SetEndPosition(lookAt, endPosition.transform.position);
+        }
+    }
+
+    void SpawnPlanes(int numberToSpawn)
+    {
+        if (planeAiLocations.Length < numberToSpawn)
+        {
+            return;
+        }
+        for (int i = 0; i < numberToSpawn; i++)
+        {
+            GameObject startPosition = planeAiLocations[rnd.Next(0, planeAiLocations.Length)];
+            GameObject endPosition;
+
+            do
+            {
+                endPosition = planeAiLocations[rnd.Next(0, planeAiLocations.Length)];
+            } while (startPosition == endPosition);
+
+            Vector3 lookAt = endPosition.transform.position - startPosition.transform.position;
+            Quaternion targetRotation = Quaternion.LookRotation(lookAt);
+
+            GameObject newPlane = Instantiate(planePrefab, startPosition.transform.position, targetRotation);
+            newPlane.GetComponent<PlaneMovement>().SetEndPosition(lookAt, endPosition);
         }
     }
 }

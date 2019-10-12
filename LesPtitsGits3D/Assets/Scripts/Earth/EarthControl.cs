@@ -25,7 +25,7 @@ public class EarthControl : MonoBehaviour
 
     private Vector3 FarPosition;
     private Vector3 ClosePosition;
-
+    
     private RaycastHit raycastHit;
     private Ray ray;
 
@@ -40,7 +40,7 @@ public class EarthControl : MonoBehaviour
     private GameObject m_CurrentTornado;
     private Vector3 m_TornadoScale= new Vector3(0.02f, 0.02f, 0.02f);
     private Vector3 m_TornadoRotation = new Vector3(0f, 0f, 0f);
-
+    
     private void Start()
     {
         MainCamera = Camera.main;
@@ -60,8 +60,6 @@ public class EarthControl : MonoBehaviour
             journeyLength = Math.Abs(MainCamera.transform.position.z - CloseValueCamera);
             StartPosition = MainCamera.transform.position;
             EndPosition = ClosePosition;
-            m_IsZoomOut = false;
-            RegionHandler.Instance.RegionOver(m_LastRegion, true);
         }
 
         if (Input.GetButtonDown("ZoomOut"))
@@ -70,7 +68,6 @@ public class EarthControl : MonoBehaviour
             journeyLength = Math.Abs(MainCamera.transform.position.z - FarValueCamera);
             StartPosition = MainCamera.transform.position;
             EndPosition = FarPosition;
-            m_IsZoomOut = true;
         }
 
         float distCovered = (Time.time - StartTime) * speedZoom;
