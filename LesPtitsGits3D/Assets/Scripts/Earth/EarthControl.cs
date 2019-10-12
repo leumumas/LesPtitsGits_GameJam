@@ -89,14 +89,17 @@ public class EarthControl : MonoBehaviour
         if (Physics.Raycast(ray, out raycastHit))
         {
             GlobalRegion globalRegion = raycastHit.collider.GetComponent<GlobalRegion>();
-            if (m_IsZoomOut && globalRegion != null && globalRegion != m_LastRegion)
+            if (globalRegion != null && globalRegion != m_LastRegion)
             {
-                if (m_LastRegion != null)
+                if (m_IsZoomOut && m_LastRegion != null)
                 {
                     RegionHandler.Instance.RegionOver(m_LastRegion, true);
                 }
                 m_LastRegion = globalRegion;
-                RegionHandler.Instance.RegionOver(m_LastRegion, false);
+                if (m_IsZoomOut)
+                {
+                    RegionHandler.Instance.RegionOver(m_LastRegion, false);
+                }
                 m_CanSpawnTornado = m_LastRegion.Tornado;
                 m_CanSpawnVolcano = m_LastRegion.Volcano;
                 m_CanSpawnEarthQuake = m_LastRegion.EarthQuake;
