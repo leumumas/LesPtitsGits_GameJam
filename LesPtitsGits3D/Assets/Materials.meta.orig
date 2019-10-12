@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 88f4f81e4506c234f97831cfeb559f45
+=======
 guid: 1619c99d8ff29334698cb7069818fe1c
+>>>>>>> Tornado v1 without behaviour
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
