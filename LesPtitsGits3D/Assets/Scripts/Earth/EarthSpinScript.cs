@@ -26,18 +26,18 @@ public class EarthSpinScript : MonoBehaviour
 
     private void Start()
     {
-        /*MainCamera = Camera.main;
+        MainCamera = Camera.main;
         FarPosition = new Vector3(0, 0, FarValueCamera);
         ClosePosition = new Vector3(0, 0, CloseValueCamera);
         StartPosition = FarPosition;
         EndPosition = FarPosition;
         StartTime = Time.time;
-        MainCamera.transform.position = EndPosition;*/
+        MainCamera.transform.position = EndPosition;
     }
 
     void Update() 
     {
-        /*if (Input.GetButtonDown("ZoomIn"))
+        if (Input.GetButtonDown("ZoomIn"))
         {
             StartTime = Time.time;
             journeyLength = Math.Abs(MainCamera.transform.position.z - CloseValueCamera);
@@ -66,6 +66,6 @@ public class EarthSpinScript : MonoBehaviour
         float rotation = Input.GetAxis("Horizontal") * speed;
 
         transform.Rotate(Vector3.up, rotation * Time.deltaTime, Space.World);
-        transform.Rotate(Vector3.right, translation * Time.deltaTime, Space.World);*/
+        transform.Rotate(Vector3.right, translation * Time.deltaTime, Space.World);
     }
 }

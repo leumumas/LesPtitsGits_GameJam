@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6173896854762691977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208161605295746131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Oceania
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 5b1ff9251e1957e4c92307ff28f9626e, type: 2}
+  m_Ocean: 0
 --- !u!1 &220888915650847186
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +44,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 4172016383669068529}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &1842000143690120849
 MeshFilter:
@@ -78,6 +92,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3935347957172209306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278204012014889838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Europe
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 3a55d1e718064254f83574052ba20b5d, type: 2}
+  m_Ocean: 0
 --- !u!1 &336127756909034314
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +136,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 4172016383669068529}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8312985241050454621
 MeshFilter:
@@ -156,6 +184,62 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5884402154075893956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667015575462444152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Asia
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 452d2f91bbf34b64aafe61abf2252169, type: 2}
+  m_Ocean: 0
+--- !u!114 &2146376940483365487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672243717619328796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: South America
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 4972b21f9f50c69478c0d30131f65570, type: 2}
+  m_Ocean: 0
+--- !u!114 &4270059969645414860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792896254163712118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Ocean
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: a98c1ac67a6ff114d88707645d236cc8, type: 2}
+  m_Ocean: 1
+--- !u!114 &1716237909669802693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107671647854125889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Central America
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 92c1e99565877314a89d22a3dcaaf12c, type: 2}
+  m_Ocean: 0
 --- !u!1 &1934431313276913583
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +270,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 4172016383669068529}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &3138709759628251163
 MeshFilter:
@@ -234,6 +318,62 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8987028901487526429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067630259466408045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Africa
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 0bdc670a2dd0a2347b1b21137e720b9f, type: 2}
+  m_Ocean: 0
+--- !u!114 &5650473413478610395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128942730940906633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Artic
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: d7c7c6343020ae84d9bbecc2e37924f4, type: 2}
+  m_Ocean: 0
+--- !u!114 &5215749544889728568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354972053295979155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Madagascar
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 0bdc670a2dd0a2347b1b21137e720b9f, type: 2}
+  m_Ocean: 0
+--- !u!114 &6647459598479238028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733853836370082270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: North Oceania
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 5b1ff9251e1957e4c92307ff28f9626e, type: 2}
+  m_Ocean: 0
 --- !u!1 &4174603402278496503
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,9 +383,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4172016383669068529}
-  - component: {fileID: 4152084766641359415}
-  - component: {fileID: 4159946875094337641}
-  - component: {fileID: 4173374635930640254}
   m_Layer: 0
   m_Name: EarthZone
   m_TagString: Untagged
@@ -264,79 +401,44 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5852201943492567045}
   - {fileID: 8760758311170104692}
   - {fileID: 5950233004452002411}
   - {fileID: 3920514253883405877}
   - {fileID: 5839531633036453357}
   - {fileID: 6207542736323623547}
   - {fileID: 6398557522771698451}
-  - {fileID: 990023774977410735}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4152084766641359415
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4174603402278496503}
-  m_Mesh: {fileID: 4300000, guid: 00d595aac3b77e347a084ad71e3b7f2d, type: 3}
---- !u!23 &4159946875094337641
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4174603402278496503}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9ad627dc231083a48a41eccbee2a877a, type: 2}
-  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!114 &4173374635930640254
+--- !u!114 &68641716090278799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4174603402278496503}
+  m_GameObject: {fileID: 4663527622393041438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d891d12ffa2537429709cadaf2b7063, type: 3}
-  m_Name: 
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Antilles
   m_EditorClassIdentifier: 
-  speed: 70
-  speedZoom: 10
-  CloseValueCamera: -1.5
-  FarValueCamera: -4
+  m_CurrentRegion: {fileID: 11400000, guid: 4972b21f9f50c69478c0d30131f65570, type: 2}
+  m_Ocean: 0
+--- !u!114 &8422318560024522504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6319280020221956527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Japan
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 452d2f91bbf34b64aafe61abf2252169, type: 2}
+  m_Ocean: 0
 --- !u!1 &6383290554127178555
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +469,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 4172016383669068529}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5324834661929070450
 MeshFilter:
@@ -415,49 +517,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &7062628409165288981
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 990023774977410735}
-  - component: {fileID: 3322707870138995579}
-  m_Layer: 0
-  m_Name: GlobalZone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &990023774977410735
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062628409165288981}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.010450363, y: -0.14830661, z: 0.122694016}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4172016383669068529}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3322707870138995579
+--- !u!114 &397049411539073475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062628409165288981}
+  m_GameObject: {fileID: 6681097974023880792}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: North America
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: 92c1e99565877314a89d22a3dcaaf12c, type: 2}
+  m_Ocean: 0
+--- !u!114 &8081605961347345062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452449619221369366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d891d12ffa2537429709cadaf2b7063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 60
+  speedZoom: 10
+  CloseValueCamera: -1.5
+  FarValueCamera: -4
 --- !u!1 &7749387782824079452
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +577,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 4172016383669068529}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &4435322542564436856
 MeshFilter:
@@ -566,7 +655,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 4172016383669068529}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &2570532965682320619
 MeshFilter:
@@ -614,3 +703,182 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4857592960118856445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8639955051809736515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Groenland
+  m_EditorClassIdentifier: 
+  m_CurrentRegion: {fileID: 11400000, guid: b2fa173e489b63d40a47a8ba5ac4c4a1, type: 2}
+  m_Ocean: 0
+--- !u!1001 &9218993904323385304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4172016383669068529}
+    m_Modifications:
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773320310049768910, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_Name
+      value: SplitTheEarth
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9de490e988f95074ebbca1aef200c940, type: 3}
+--- !u!1 &672243717619328796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8549019590584168644, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6681097974023880792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542410808854927232, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2354972053295979155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6872203337450786123, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &792896254163712118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8426407447224496046, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6319280020221956527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2901133645939099255, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &208161605295746131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9012824339554827147, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3733853836370082270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5485703567933091334, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8639955051809736515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 582999871416029339, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &278204012014889838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8947547517954014390, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4663527622393041438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4559999860439926214, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1107671647854125889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8119795936297890969, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &667015575462444152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8552834034591902624, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2128942730940906633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7096534188421950289, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2067630259466408045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7152209720205887413, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5852201943492567045 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7452449619221369366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1773320310049768910, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
