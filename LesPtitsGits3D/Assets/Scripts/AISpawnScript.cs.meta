@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d24bf8ab87008e84baa9a3b152364fc0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - boatPrefab: {fileID: 1404434379067854, guid: a89eef680e28b83449e3a6ba46792fbe,
+      type: 3}
+  executionOrder: 0
+  icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
