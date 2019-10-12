@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class EarthSpinScript : MonoBehaviour
+public class EarthControl : MonoBehaviour
 {
     [SerializeField]
     private float speed = 10f;
@@ -13,6 +13,8 @@ public class EarthSpinScript : MonoBehaviour
     private float CloseValueCamera = -1.5f;
     [SerializeField]
     private float FarValueCamera = -4f;
+    [SerializeField]
+    private GameObject m_Tornado;
 
     private Camera MainCamera;
 
@@ -30,6 +32,14 @@ public class EarthSpinScript : MonoBehaviour
     private GlobalRegion m_LastRegion;
 
     private bool m_IsZoomOut = true;
+
+    private bool m_CanSpawnTornado = true;
+    private bool m_CanSpawnEarthQuake = true;
+    private bool m_CanSpawnVolcano = true;
+
+    private GameObject m_CurrentTornado;
+    private Vector3 m_TornadoScale= new Vector3(0.02f, 0.02f, 0.02f);
+    private Vector3 m_TornadoRotation = new Vector3(0f, 0f, 0f);
 
     private void Start()
     {
@@ -62,7 +72,7 @@ public class EarthSpinScript : MonoBehaviour
             EndPosition = FarPosition;
             m_IsZoomOut = true;
         }
-        
+
         float distCovered = (Time.time - StartTime) * speedZoom;
         
         float fractionOfJourney = distCovered / journeyLength;
@@ -79,21 +89,37 @@ public class EarthSpinScript : MonoBehaviour
         transform.Rotate(Vector3.right, translation * Time.deltaTime, Space.World);
 
         ray = new Ray(MainCamera.transform.position, MainCamera.transform.forward);
-        if (m_IsZoomOut)
+        if (Physics.Raycast(ray, out raycastHit))
         {
-            if (Physics.Raycast(ray, out raycastHit))
+            GlobalRegion globalRegion = raycastHit.collider.GetComponent<GlobalRegion>();
+            if (m_IsZoomOut && globalRegion != null && globalRegion != m_LastRegion)
             {
-                GlobalRegion globalRegion = raycastHit.collider.GetComponent<GlobalRegion>();
-                if (globalRegion != null && globalRegion != m_LastRegion)
+                if (m_LastRegion != null)
                 {
-                    if (m_LastRegion != null)
-                    {
-                        RegionHandler.Instance.RegionOver(m_LastRegion, true);
-                    }
-                    m_LastRegion = globalRegion;
-                    RegionHandler.Instance.RegionOver(m_LastRegion, false);
+                    RegionHandler.Instance.RegionOver(m_LastRegion, true);
                 }
+                m_LastRegion = globalRegion;
+                RegionHandler.Instance.RegionOver(m_LastRegion, false);
+                m_CanSpawnTornado = m_LastRegion.Tornado;
+                m_CanSpawnVolcano = m_LastRegion.Volcano;
+                m_CanSpawnEarthQuake = m_LastRegion.EarthQuake;
+            }
+
+            if (Input.GetButtonDown("Submit") && m_CanSpawnTornado)
+            {
+                SpawnTornado(raycastHit.point, raycastHit.normal);
             }
         }
+    }
+
+    private void SpawnTornado(Vector3 i_HitPosition, Vector3 i_HitNormal)
+    {
+        if (m_CurrentTornado != null)
+        {
+            Destroy(m_CurrentTornado);
+        }
+
+        m_CurrentTornado = Instantiate(m_Tornado, i_HitPosition, Quaternion.FromToRotation(Vector3.up, i_HitNormal), this.transform);
+        m_CurrentTornado.transform.localScale = m_TornadoScale;
     }
 }
