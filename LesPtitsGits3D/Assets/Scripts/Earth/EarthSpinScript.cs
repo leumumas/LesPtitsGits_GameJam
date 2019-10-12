@@ -51,6 +51,7 @@ public class EarthSpinScript : MonoBehaviour
             StartPosition = MainCamera.transform.position;
             EndPosition = ClosePosition;
             m_IsZoomOut = false;
+            RegionHandler.Instance.RegionOver(m_LastRegion, true);
         }
 
         if (Input.GetButtonDown("ZoomOut"))

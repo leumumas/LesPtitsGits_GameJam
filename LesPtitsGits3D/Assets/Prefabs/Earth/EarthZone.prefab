@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Antilles
   m_EditorClassIdentifier: 
-  m_CurrentRegion: {fileID: 0}
+  m_CurrentRegion: {fileID: 11400000, guid: 4972b21f9f50c69478c0d30131f65570, type: 2}
   m_Ocean: 0
 --- !u!114 &8422318560024522504
 MonoBehaviour:

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a59120e919876f4d8b3acd4b8f6af54, type: 3}
-  m_Name: Sourth America 1
+  m_Name: Sourth America
   m_EditorClassIdentifier: 
   m_NameRegion: South America
   m_Population: 422000000

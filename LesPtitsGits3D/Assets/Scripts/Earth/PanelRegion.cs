@@ -20,8 +20,9 @@ public class PanelRegion : MonoBehaviour
 
     public void UpdateRegion(GlobalRegion i_GlobalRegion, bool i_IsOut)
     {
-        if (i_GlobalRegion.Ocean)
+        if (i_GlobalRegion == null || i_GlobalRegion.Ocean)
         {
+            animatorPanel.SetBool("Out", true);
             return;
         }
         m_NameRegion.text = i_GlobalRegion.NameRegion;
