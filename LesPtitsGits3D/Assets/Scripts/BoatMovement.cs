@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipMovement : MonoBehaviour
+public class BoatMovement : MonoBehaviour
 {
     private Vector3 endPosition;
     private Vector3 direction;

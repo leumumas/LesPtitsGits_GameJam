@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatPrefab: {fileID: 1404434379067854, guid: a89eef680e28b83449e3a6ba46792fbe, type: 3}
+  planePrefab: {fileID: 185370, guid: a3e9bd2d875ca52428801bc00f70c240, type: 3}
