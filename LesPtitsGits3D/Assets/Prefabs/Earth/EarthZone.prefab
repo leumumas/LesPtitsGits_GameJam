@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6173896854762691977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208161605295746131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Oceania
+  m_EditorClassIdentifier: 
+  m_NameRegion: Oceania
+  m_Population: 41658410328
+  m_Ocean: 0
 --- !u!1 &220888915650847186
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,6 +93,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3935347957172209306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278204012014889838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Europe
+  m_EditorClassIdentifier: 
+  m_NameRegion: Europe
+  m_Population: 1234569
+  m_Ocean: 0
 --- !u!1 &336127756909034314
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +186,66 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5884402154075893956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667015575462444152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Asia
+  m_EditorClassIdentifier: 
+  m_NameRegion: Asia
+  m_Population: 2147483647
+  m_Ocean: 0
+--- !u!114 &2146376940483365487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672243717619328796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: South America
+  m_EditorClassIdentifier: 
+  m_NameRegion: South America
+  m_Population: 4600000000
+  m_Ocean: 0
+--- !u!114 &4270059969645414860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792896254163712118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Ocean
+  m_EditorClassIdentifier: 
+  m_NameRegion: Ocean
+  m_Population: 0
+  m_Ocean: 1
+--- !u!114 &1716237909669802693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107671647854125889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Central America
+  m_EditorClassIdentifier: 
+  m_NameRegion: Central America
+  m_Population: 2000000
+  m_Ocean: 0
 --- !u!1 &1934431313276913583
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +324,66 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8987028901487526429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067630259466408045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Africa
+  m_EditorClassIdentifier: 
+  m_NameRegion: Africa
+  m_Population: 700000
+  m_Ocean: 0
+--- !u!114 &5650473413478610395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128942730940906633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Artic
+  m_EditorClassIdentifier: 
+  m_NameRegion: Arctic
+  m_Population: 1
+  m_Ocean: 0
+--- !u!114 &5215749544889728568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354972053295979155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Madagascar
+  m_EditorClassIdentifier: 
+  m_NameRegion: Madagascar
+  m_Population: 1648056
+  m_Ocean: 0
+--- !u!114 &6647459598479238028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733853836370082270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: North Oceania
+  m_EditorClassIdentifier: 
+  m_NameRegion: Oceania
+  m_Population: 41658410328
+  m_Ocean: 0
 --- !u!1 &4174603402278496503
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +421,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68641716090278799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663527622393041438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Antilles
+  m_EditorClassIdentifier: 
+  m_NameRegion: Antilles
+  m_Population: 10000
+  m_Ocean: 0
+--- !u!114 &8422318560024522504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6319280020221956527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Japan
+  m_EditorClassIdentifier: 
+  m_NameRegion: Japan
+  m_Population: 12200481
+  m_Ocean: 0
 --- !u!1 &6383290554127178555
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +529,37 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &397049411539073475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681097974023880792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: North America
+  m_EditorClassIdentifier: 
+  m_NameRegion: North America
+  m_Population: 1144814148
+  m_Ocean: 0
+--- !u!114 &8081605961347345062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452449619221369366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d891d12ffa2537429709cadaf2b7063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 60
+  speedZoom: 10
+  CloseValueCamera: -1.5
+  FarValueCamera: -4
 --- !u!1 &7749387782824079452
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,22 +716,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8081605961347345062
+--- !u!114 &4857592960118856445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7452449619221369366}
+  m_GameObject: {fileID: 8639955051809736515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d891d12ffa2537429709cadaf2b7063, type: 3}
-  m_Name: 
+  m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
+  m_Name: Groenland
   m_EditorClassIdentifier: 
-  speed: 10
-  speedZoom: 10
-  CloseValueCamera: -1.5
-  FarValueCamera: -4
+  m_NameRegion: Groenland
+  m_Population: 12
+  m_Ocean: 0
 --- !u!1001 &9218993904323385304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,11 +738,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4172016383669068529}
     m_Modifications:
-    - target: {fileID: 1773320310049768910, guid: 9de490e988f95074ebbca1aef200c940,
-        type: 3}
-      propertyPath: m_Name
-      value: SplitTheEarth
-      objectReference: {fileID: 0}
     - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -588,27 +793,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+    - target: {fileID: 1773320310049768910, guid: 9de490e988f95074ebbca1aef200c940,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
+      propertyPath: m_Name
+      value: SplitTheEarth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de490e988f95074ebbca1aef200c940, type: 3}
---- !u!1 &7452449619221369366 stripped
+--- !u!1 &672243717619328796 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1773320310049768910, guid: 9de490e988f95074ebbca1aef200c940,
+  m_CorrespondingSourceObject: {fileID: 8549019590584168644, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6681097974023880792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542410808854927232, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2354972053295979155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6872203337450786123, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &792896254163712118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8426407447224496046, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6319280020221956527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2901133645939099255, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &208161605295746131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9012824339554827147, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3733853836370082270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5485703567933091334, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8639955051809736515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 582999871416029339, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &278204012014889838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8947547517954014390, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4663527622393041438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4559999860439926214, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1107671647854125889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8119795936297890969, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &667015575462444152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8552834034591902624, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2128942730940906633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7096534188421950289, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2067630259466408045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7152209720205887413, guid: 9de490e988f95074ebbca1aef200c940,
     type: 3}
   m_PrefabInstance: {fileID: 9218993904323385304}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5852201943492567045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+    type: 3}
+  m_PrefabInstance: {fileID: 9218993904323385304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7452449619221369366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1773320310049768910, guid: 9de490e988f95074ebbca1aef200c940,
     type: 3}
   m_PrefabInstance: {fileID: 9218993904323385304}
   m_PrefabAsset: {fileID: 0}

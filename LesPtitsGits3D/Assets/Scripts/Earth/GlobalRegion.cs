@@ -5,18 +5,18 @@ using UnityEngine;
 public class GlobalRegion : MonoBehaviour
 {
     [SerializeField]
-    private string m_Name;
+    private string m_NameRegion;
     [SerializeField]
-    private int m_Population;
+    private long m_Population;
+    [SerializeField]
+    private bool m_Ocean = false;
+
+    public long Population => m_Population;
+    public string NameRegion => m_NameRegion;
+    public bool Ocean => m_Ocean;
 
     // Start is called before the first frame update
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }
