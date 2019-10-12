@@ -24,13 +24,6 @@ public class EarthSpinScript : MonoBehaviour
     private Vector3 FarPosition;
     private Vector3 ClosePosition;
 
-    private RaycastHit raycastHit;
-    private Ray ray;
-
-    private GlobalRegion m_LastRegion;
-
-    private bool m_IsZoomOut = true;
-
     private void Start()
     {
         MainCamera = Camera.main;
@@ -50,8 +43,6 @@ public class EarthSpinScript : MonoBehaviour
             journeyLength = Math.Abs(MainCamera.transform.position.z - CloseValueCamera);
             StartPosition = MainCamera.transform.position;
             EndPosition = ClosePosition;
-            m_IsZoomOut = false;
-            RegionHandler.Instance.RegionOver(m_LastRegion, true);
         }
 
         if (Input.GetButtonDown("ZoomOut"))
@@ -60,7 +51,6 @@ public class EarthSpinScript : MonoBehaviour
             journeyLength = Math.Abs(MainCamera.transform.position.z - FarValueCamera);
             StartPosition = MainCamera.transform.position;
             EndPosition = FarPosition;
-            m_IsZoomOut = true;
         }
         
         float distCovered = (Time.time - StartTime) * speedZoom;
@@ -77,23 +67,5 @@ public class EarthSpinScript : MonoBehaviour
 
         transform.Rotate(Vector3.up, rotation * Time.deltaTime, Space.World);
         transform.Rotate(Vector3.right, translation * Time.deltaTime, Space.World);
-
-        ray = new Ray(MainCamera.transform.position, MainCamera.transform.forward);
-        if (m_IsZoomOut)
-        {
-            if (Physics.Raycast(ray, out raycastHit))
-            {
-                GlobalRegion globalRegion = raycastHit.collider.GetComponent<GlobalRegion>();
-                if (globalRegion != null && globalRegion != m_LastRegion)
-                {
-                    if (m_LastRegion != null)
-                    {
-                        RegionHandler.Instance.RegionOver(m_LastRegion, true);
-                    }
-                    m_LastRegion = globalRegion;
-                    RegionHandler.Instance.RegionOver(m_LastRegion, false);
-                }
-            }
-        }
     }
 }
