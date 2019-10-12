@@ -443,75 +443,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229423156}
   m_CullTransparentMesh: 0
---- !u!1001 &349065865
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -927199367670048503, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_Name
-      value: SplitTheEarth
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: d5c47a25b270b5d41b004c190e66fdf7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d5c47a25b270b5d41b004c190e66fdf7, type: 3}
 --- !u!1 &608703426
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +767,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890044694}
   m_CullTransparentMesh: 0
+--- !u!1001 &951897384
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1773320310049768910, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_Name
+      value: SplitTheEarth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370733995969378269, guid: 9de490e988f95074ebbca1aef200c940,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9de490e988f95074ebbca1aef200c940, type: 3}
 --- !u!1 &1304547126
 GameObject:
   m_ObjectHideFlags: 0
