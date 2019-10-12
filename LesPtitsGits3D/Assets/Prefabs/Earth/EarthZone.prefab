@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Oceania
   m_EditorClassIdentifier: 
-  m_NameRegion: Oceania
-  m_Population: 41658410328
+  m_CurrentRegion: {fileID: 11400000, guid: 5b1ff9251e1957e4c92307ff28f9626e, type: 2}
   m_Ocean: 0
 --- !u!1 &220888915650847186
 GameObject:
@@ -105,8 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Europe
   m_EditorClassIdentifier: 
-  m_NameRegion: Europe
-  m_Population: 1234569
+  m_CurrentRegion: {fileID: 11400000, guid: 3a55d1e718064254f83574052ba20b5d, type: 2}
   m_Ocean: 0
 --- !u!1 &336127756909034314
 GameObject:
@@ -198,8 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Asia
   m_EditorClassIdentifier: 
-  m_NameRegion: Asia
-  m_Population: 2147483647
+  m_CurrentRegion: {fileID: 11400000, guid: 452d2f91bbf34b64aafe61abf2252169, type: 2}
   m_Ocean: 0
 --- !u!114 &2146376940483365487
 MonoBehaviour:
@@ -213,8 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: South America
   m_EditorClassIdentifier: 
-  m_NameRegion: South America
-  m_Population: 4600000000
+  m_CurrentRegion: {fileID: 11400000, guid: 4972b21f9f50c69478c0d30131f65570, type: 2}
   m_Ocean: 0
 --- !u!114 &4270059969645414860
 MonoBehaviour:
@@ -228,8 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Ocean
   m_EditorClassIdentifier: 
-  m_NameRegion: Ocean
-  m_Population: 0
+  m_CurrentRegion: {fileID: 11400000, guid: a98c1ac67a6ff114d88707645d236cc8, type: 2}
   m_Ocean: 1
 --- !u!114 &1716237909669802693
 MonoBehaviour:
@@ -243,8 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Central America
   m_EditorClassIdentifier: 
-  m_NameRegion: Central America
-  m_Population: 2000000
+  m_CurrentRegion: {fileID: 11400000, guid: 92c1e99565877314a89d22a3dcaaf12c, type: 2}
   m_Ocean: 0
 --- !u!1 &1934431313276913583
 GameObject:
@@ -336,8 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Africa
   m_EditorClassIdentifier: 
-  m_NameRegion: Africa
-  m_Population: 700000
+  m_CurrentRegion: {fileID: 11400000, guid: 0bdc670a2dd0a2347b1b21137e720b9f, type: 2}
   m_Ocean: 0
 --- !u!114 &5650473413478610395
 MonoBehaviour:
@@ -351,8 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Artic
   m_EditorClassIdentifier: 
-  m_NameRegion: Arctic
-  m_Population: 1
+  m_CurrentRegion: {fileID: 11400000, guid: d7c7c6343020ae84d9bbecc2e37924f4, type: 2}
   m_Ocean: 0
 --- !u!114 &5215749544889728568
 MonoBehaviour:
@@ -366,8 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Madagascar
   m_EditorClassIdentifier: 
-  m_NameRegion: Madagascar
-  m_Population: 1648056
+  m_CurrentRegion: {fileID: 11400000, guid: 0bdc670a2dd0a2347b1b21137e720b9f, type: 2}
   m_Ocean: 0
 --- !u!114 &6647459598479238028
 MonoBehaviour:
@@ -381,8 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: North Oceania
   m_EditorClassIdentifier: 
-  m_NameRegion: Oceania
-  m_Population: 41658410328
+  m_CurrentRegion: {fileID: 11400000, guid: 5b1ff9251e1957e4c92307ff28f9626e, type: 2}
   m_Ocean: 0
 --- !u!1 &4174603402278496503
 GameObject:
@@ -433,8 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Antilles
   m_EditorClassIdentifier: 
-  m_NameRegion: Antilles
-  m_Population: 10000
+  m_CurrentRegion: {fileID: 0}
   m_Ocean: 0
 --- !u!114 &8422318560024522504
 MonoBehaviour:
@@ -448,8 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Japan
   m_EditorClassIdentifier: 
-  m_NameRegion: Japan
-  m_Population: 12200481
+  m_CurrentRegion: {fileID: 11400000, guid: 452d2f91bbf34b64aafe61abf2252169, type: 2}
   m_Ocean: 0
 --- !u!1 &6383290554127178555
 GameObject:
@@ -541,8 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: North America
   m_EditorClassIdentifier: 
-  m_NameRegion: North America
-  m_Population: 1144814148
+  m_CurrentRegion: {fileID: 11400000, guid: 92c1e99565877314a89d22a3dcaaf12c, type: 2}
   m_Ocean: 0
 --- !u!114 &8081605961347345062
 MonoBehaviour:
@@ -728,8 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67ab3e8f353a8043a3306a68059d84c, type: 3}
   m_Name: Groenland
   m_EditorClassIdentifier: 
-  m_NameRegion: Groenland
-  m_Population: 12
+  m_CurrentRegion: {fileID: 11400000, guid: b2fa173e489b63d40a47a8ba5ac4c4a1, type: 2}
   m_Ocean: 0
 --- !u!1001 &9218993904323385304
 PrefabInstance:

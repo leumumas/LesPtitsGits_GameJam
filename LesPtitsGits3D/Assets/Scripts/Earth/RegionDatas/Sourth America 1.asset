@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a59120e919876f4d8b3acd4b8f6af54, type: 3}
+  m_Name: Sourth America 1
+  m_EditorClassIdentifier: 
+  m_NameRegion: South America
+  m_Population: 422000000
+  m_Tornado: 0
+  m_Volcano: 1
+  m_EarthQuake: 1
