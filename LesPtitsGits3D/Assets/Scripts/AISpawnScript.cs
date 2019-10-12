@@ -20,7 +20,7 @@ public class AISpawnScript : MonoBehaviour
     {
         spawnTimer = Time.deltaTime;
 
-        boatAiLocations = GameObject.FindGameObjectsWithTag("BoatLocation");
+        //boatAiLocations = GameObject.FindGameObjectsWithTag("BoatLocation");
         planeAiLocations = GameObject.FindGameObjectsWithTag("PlaneLocation");
        // carAiLocations = GameObject.FindGameObjectsWithTag("CarLocation");
     }
@@ -42,7 +42,6 @@ public class AISpawnScript : MonoBehaviour
         int nbPlanesToSpawn = rnd.Next(1, 2);
         int nbCarsToSpawn = rnd.Next(0, 2);
 
-        SpawnBoats(nbBoatsToSpawn);
         SpawnPlanes(nbPlanesToSpawn);
     }
 
