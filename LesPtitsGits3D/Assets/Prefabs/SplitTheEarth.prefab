@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6348269687784136938}
   - component: {fileID: 5671198846284020886}
   - component: {fileID: 4158650543935516314}
+  - component: {fileID: 7805765315582677983}
   m_Layer: 0
   m_Name: Groenland
   m_TagString: Untagged
@@ -57,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,6 +79,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7805765315582677983
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582999871416029339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6976109805709057134, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &1773320310049768910
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +148,7 @@ GameObject:
   - component: {fileID: 8598576517794106445}
   - component: {fileID: 2795781722386385212}
   - component: {fileID: 5156666323506187960}
+  - component: {fileID: 6599882481303036590}
   m_Layer: 0
   m_Name: North America
   m_TagString: Untagged
@@ -179,8 +195,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8578244422835418148, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9ad627dc231083a48a41eccbee2a877a, type: 2}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -201,6 +217,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6599882481303036590
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542410808854927232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -1000634385288732530, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &2901133645939099255
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +242,7 @@ GameObject:
   - component: {fileID: 7818971503438647776}
   - component: {fileID: 6087750117851779951}
   - component: {fileID: 6540293705301005623}
+  - component: {fileID: 8351872838272165264}
   m_Layer: 0
   m_Name: Japan
   m_TagString: Untagged
@@ -258,7 +289,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -279,6 +310,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8351872838272165264
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901133645939099255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6430497343647153826, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &4559999860439926214
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +335,7 @@ GameObject:
   - component: {fileID: 4292999715740650018}
   - component: {fileID: 8436649867896753300}
   - component: {fileID: 7591028438145704631}
+  - component: {fileID: 5552312292244790635}
   m_Layer: 0
   m_Name: Antilles
   m_TagString: Untagged
@@ -336,7 +382,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -357,6 +403,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5552312292244790635
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559999860439926214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -6672532246289811746, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &5485703567933091334
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +428,7 @@ GameObject:
   - component: {fileID: 715113090322359826}
   - component: {fileID: 1975322223254907477}
   - component: {fileID: 8237809530485314244}
+  - component: {fileID: 8832045428979827794}
   m_Layer: 0
   m_Name: Islands
   m_TagString: Untagged
@@ -414,7 +475,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -435,6 +496,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8832045428979827794
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485703567933091334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1538471900966082821, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &6872203337450786123
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +521,7 @@ GameObject:
   - component: {fileID: 8007611022461790325}
   - component: {fileID: 7436558378994087617}
   - component: {fileID: 8995119078607200542}
+  - component: {fileID: 4222933625163948964}
   m_Layer: 0
   m_Name: Madagascar
   m_TagString: Untagged
@@ -492,7 +568,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -513,6 +589,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4222933625163948964
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872203337450786123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -260703622282548446, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &7096534188421950289
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,6 +614,7 @@ GameObject:
   - component: {fileID: 3990329217206440972}
   - component: {fileID: 6473622912077404318}
   - component: {fileID: 5091816667549600532}
+  - component: {fileID: 8588121883604004638}
   m_Layer: 0
   m_Name: Arctic
   m_TagString: Untagged
@@ -570,7 +661,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -591,6 +682,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8588121883604004638
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096534188421950289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 11501225731684757, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &7152209720205887413
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +707,7 @@ GameObject:
   - component: {fileID: 3532806969653491876}
   - component: {fileID: 1779627029788069254}
   - component: {fileID: 3496712446204210021}
+  - component: {fileID: 7801609504676122039}
   m_Layer: 0
   m_Name: Africa
   m_TagString: Untagged
@@ -648,8 +754,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8578244422835418148, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9ad627dc231083a48a41eccbee2a877a, type: 2}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -670,6 +776,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7801609504676122039
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152209720205887413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1103861910637297138, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &8119795936297890969
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +801,7 @@ GameObject:
   - component: {fileID: 3783478155741642098}
   - component: {fileID: 5614467949111966044}
   - component: {fileID: 900725809650710073}
+  - component: {fileID: 5762220906031370973}
   m_Layer: 0
   m_Name: Central America
   m_TagString: Untagged
@@ -727,7 +848,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -748,6 +869,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5762220906031370973
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8119795936297890969}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 336477513484149683, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &8426407447224496046
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +894,7 @@ GameObject:
   - component: {fileID: 8914712219337928829}
   - component: {fileID: 6550772672088736068}
   - component: {fileID: 6659754928216847422}
+  - component: {fileID: 5890987944888546860}
   m_Layer: 0
   m_Name: low_poly_earth
   m_TagString: Untagged
@@ -805,8 +941,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8578244422835418148, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9ad627dc231083a48a41eccbee2a877a, type: 2}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -827,6 +963,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5890987944888546860
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8426407447224496046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7931747945470877251, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &8549019590584168644
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +988,7 @@ GameObject:
   - component: {fileID: 8320923867780427642}
   - component: {fileID: 6291631636501858616}
   - component: {fileID: 4746521505544153341}
+  - component: {fileID: 3535426655212891665}
   m_Layer: 0
   m_Name: South America
   m_TagString: Untagged
@@ -884,7 +1035,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -905,6 +1056,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3535426655212891665
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8549019590584168644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4112027533335265933, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &8552834034591902624
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +1081,7 @@ GameObject:
   - component: {fileID: 3125924382271535176}
   - component: {fileID: 4480592478784613374}
   - component: {fileID: 4984423223544187556}
+  - component: {fileID: 5540462574053381097}
   m_Layer: 0
   m_Name: Asia
   m_TagString: Untagged
@@ -962,8 +1128,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8578244422835418148, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9ad627dc231083a48a41eccbee2a877a, type: 2}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -984,6 +1150,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5540462574053381097
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8552834034591902624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7667348055329597271, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &8947547517954014390
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1175,7 @@ GameObject:
   - component: {fileID: 7355538135642387424}
   - component: {fileID: 6898392655495329260}
   - component: {fileID: 902617379920630860}
+  - component: {fileID: 4327012947319389226}
   m_Layer: 0
   m_Name: Europa
   m_TagString: Untagged
@@ -1041,7 +1222,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1062,6 +1243,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4327012947319389226
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8947547517954014390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -1937096092397333263, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
 --- !u!1 &9012824339554827147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,6 +1268,7 @@ GameObject:
   - component: {fileID: 2522887187864086314}
   - component: {fileID: 8942030228068366962}
   - component: {fileID: 7748043541869047835}
+  - component: {fileID: 5038556630297770389}
   m_Layer: 0
   m_Name: Oceania
   m_TagString: Untagged
@@ -1119,7 +1315,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5957246101155379411, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
+  - {fileID: 2100000, guid: 9a314f7db98c622419511903f3f24252, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1140,3 +1336,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5038556630297770389
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012824339554827147}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 510913204565741479, guid: 65af90a56ababe14e9d92d93208339e9, type: 3}
