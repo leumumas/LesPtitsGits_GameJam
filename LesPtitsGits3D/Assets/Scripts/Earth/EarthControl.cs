@@ -17,7 +17,6 @@ public class EarthControl : MonoBehaviour
 
     private bool m_IsZoomOut = true;
     private bool Change = false;
-    
 
     private bool m_CanSpawnTornado = true;
     private bool m_CanSpawnEarthQuake = true;
@@ -34,7 +33,6 @@ public class EarthControl : MonoBehaviour
 
     void Update() 
     {
-
         ray = new Ray(MainCamera.transform.position, MainCamera.transform.forward);
         if (Physics.Raycast(ray, out raycastHit))
         {
@@ -56,41 +54,7 @@ public class EarthControl : MonoBehaviour
                 m_CanSpawnTornado = m_LastRegion.Tornado;
                 m_CanSpawnVolcano = m_LastRegion.Volcano;
                 m_CanSpawnEarthQuake = m_LastRegion.EarthQuake;
-            }
-
-            if (Input.GetButtonDown("Submit") && m_CanSpawnTornado)
-            {
-                SpawnTornado(raycastHit.point, raycastHit.normal);
-            }
-
-            if (Input.GetButtonUp("Submit") && m_CanSpawnTornado)
-            {
-                SetTornado(raycastHit.point, raycastHit.normal);
-            }
         }
-    }
-
-    private void SpawnTornado(Vector3 i_HitPosition, Vector3 i_HitNormal)
-    {
-        if (m_CurrentTornado != null)
-        {
-            Destroy(m_CurrentTornado);
-        }
-
-        m_CurrentTornado = Instantiate(m_Tornado, i_HitPosition, Quaternion.FromToRotation(Vector3.up, i_HitNormal), this.transform);
-        m_CurrentTornado.transform.localScale = m_TornadoScale;
-    }
-
-    private void SetTornado(Vector3 i_HitPosition, Vector3 i_HitNormal)
-    {
-        if (m_CurrentTornado == null)
-        {
-            return;
-        }
-
-        TornadoMovement tornadoMovement = m_CurrentTornado.GetComponent<TornadoMovement>();
-        tornadoMovement.earth = gameObject;
-        tornadoMovement.SetEndPosition(Vector3.zero, i_HitPosition);
     }
 
     public void SetIsZoomOut(bool newValue)
