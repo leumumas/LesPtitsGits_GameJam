@@ -31,7 +31,7 @@ public class TornadoMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (myTransform == null)
+        if (myTransform == null || flightPaths.Length < 0)
         {
             return;
         }
@@ -43,7 +43,7 @@ public class TornadoMovement : MonoBehaviour
         currentRotation *= Quaternion.Euler(-flightPaths[currentFlightIndex].Rotation);
 
         myTransform.localRotation = Quaternion.FromToRotation(Vector3.up, currentFlightStart);
-        myTransform.localPosition = currentFlightStart;
+        myTransform.localPosition = currentFlightEnd;
         Debug.Log(currentFlightStart);
 
         if ((currentFlightEnd - myTransform.localPosition).magnitude < 1)
@@ -69,7 +69,7 @@ public class TornadoMovement : MonoBehaviour
 
     Vector3 GetCurveMidPoint()
     {
-        return midPoint.normalized * RegionHandler.Instance.RadiusEarth;
+        return midPoint.normalized;
     }
 
     public void SetEndPosition(Vector3 direction, Vector3 endPosition)
@@ -78,14 +78,14 @@ public class TornadoMovement : MonoBehaviour
         /*Vector3 baseEulerAngle = (earth.transform.localEulerAngles * (Mathf.PI / 180)).normalized;
         Vector3 basePosition = earth.transform.InverseTransformPoint(endPosition).normalized;
         Vector3 newPosition = endPosition + baseEulerAngle;*/
-        Vector3 newPosition = Quaternion.Inverse(earth.transform.localRotation) * endPosition;  //endPosition * earth.transform.rotation;
-        this.endPosition = newPosition * RegionHandler.Instance.RadiusEarth;
+        Vector3 newPosition = (Quaternion.Inverse(earth.transform.localRotation) * endPosition).normalized;  //endPosition * earth.transform.rotation;
+        this.endPosition = newPosition;
         this.direction = direction;
         startPosition = myTransform.localPosition;
 
         float distance = Vector3.Distance(this.endPosition, startPosition);
 
-        lineSteps = (int)(baseLineSteps * distance * 2);
+        lineSteps = (int)(baseLineSteps * (distance * 2));
 
         flightPaths = new FlightPath[lineSteps];
 

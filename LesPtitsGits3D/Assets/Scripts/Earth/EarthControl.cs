@@ -10,9 +10,9 @@ public class EarthControl : MonoBehaviour
     [SerializeField]
     private float speedZoom = 10f;
     [SerializeField]
-    private float CloseValueCamera = -1.5f;
+    private float CloseValueCamera = -300f;
     [SerializeField]
-    private float FarValueCamera = -4f;
+    private float FarValueCamera = -800f;
     [SerializeField]
     private GameObject m_Tornado;
 
@@ -38,7 +38,7 @@ public class EarthControl : MonoBehaviour
     private bool m_CanSpawnVolcano = true;
 
     private GameObject m_CurrentTornado;
-    private Vector3 m_TornadoScale= new Vector3(0.02f, 0.02f, 0.02f);
+    private Vector3 m_TornadoScale= new Vector3(4f, 4f, 4f);
     private Vector3 m_TornadoRotation = new Vector3(0f, 0f, 0f);
     
     private void Start()
