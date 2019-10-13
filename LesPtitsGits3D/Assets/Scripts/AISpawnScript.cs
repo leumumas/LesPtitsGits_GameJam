@@ -48,7 +48,7 @@ public class AISpawnScript : MonoBehaviour
 
     void SpawnBoats(int numberToSpawn)
     {
-        if(boatAiLocations.Length < numberToSpawn)
+       /* if(boatAiLocations.Length < numberToSpawn)
         {
             return;
         }
@@ -64,7 +64,7 @@ public class AISpawnScript : MonoBehaviour
             
             GameObject newBoat = Instantiate(boatPrefab, PortToStartAt.transform.position, targetRotation);
             newBoat.GetComponent<BoatMovement>().SetPath(lookAt, pathToTake);
-        }
+        }*/
     }
 
     void SpawnPlanes(int numberToSpawn)
