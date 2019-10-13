@@ -1669,8 +1669,10 @@ MonoBehaviour:
   m_Tornado: {fileID: 1646904853326980480, guid: bbe8a1fb940657a47bf2a9408b20fb56,
     type: 3}
   EarthTransform: {fileID: 56398343}
-  VolcanoCooldown: 2.5
-  EarthquakeCooldown: 2.5
+  VolcanoCooldown: 4
+  m_Volcano: {fileID: 5873802528711755478, guid: be084c9c50046dc4397875fb5fa9af82,
+    type: 3}
+  EarthquakeCooldown: 4
   m_EarthQuake: {fileID: 5873802528711755478, guid: 2535c134b67929b4a9d0696e929d45c0,
     type: 3}
 --- !u!4 &1177065333

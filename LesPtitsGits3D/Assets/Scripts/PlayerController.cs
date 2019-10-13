@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
 	private float VolcanoCooldown = 2.5f;
 	private float timeVolcanoCooldown = 0f;
 	private bool isVolcanoOnCooldown = false;
-	[SerializeField]
+    [SerializeField]
+    private GameObject m_Volcano;
+    [SerializeField]
 	private float EarthquakeCooldown = 2.5f;
 	private float timeEarthquakeCooldown = 0f;
 	private bool isEarthquakeOnCooldown = false;
@@ -82,6 +84,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Cancel") && !isVolcanoOnCooldown && canVolcano)
             {
                 isVolcanoOnCooldown = true;
+                SpawnVolcano(raycastHit.point, raycastHit.normal);
             }
 
             if (Input.GetButtonDown("Fire3") && !isEarthquakeOnCooldown && canEarthQuake)
@@ -153,5 +156,11 @@ public class PlayerController : MonoBehaviour
     {
         EarthQuake earthQuake = Instantiate(m_EarthQuake, i_HitPosition, Quaternion.FromToRotation(Vector3.up, i_HitNormal), EarthTransform.transform).GetComponent<EarthQuake>();
         earthQuake.SetEarthQuake(RegionHandler.Instance.CurrentGlobalRegion);
+    }
+
+    private void SpawnVolcano(Vector3 i_HitPosition, Vector3 i_HitNormal)
+    {
+        Volcano volcano = Instantiate(m_Volcano, i_HitPosition, Quaternion.FromToRotation(Vector3.up, i_HitNormal), EarthTransform.transform).GetComponent<Volcano>();
+        volcano.SetVolcano(RegionHandler.Instance.CurrentGlobalRegion);
     }
 }
