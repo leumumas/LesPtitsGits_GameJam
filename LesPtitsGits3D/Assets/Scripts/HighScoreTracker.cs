@@ -8,6 +8,7 @@ public class HighScoreTracker : MonoBehaviour
 	public GameObject HighScoreTrackerGO;
 	public GameObject HighScoreCanvas;
 	public List<Text> HighscoreTexts;
+	public Image NewHighScore;
 
 	private List<string> HighScoreNames = new List<string>
 	{
@@ -35,6 +36,7 @@ public class HighScoreTracker : MonoBehaviour
 		DontDestroyOnLoad(HighScoreCanvas);
 		DontDestroyOnLoad(HighScoreTrackerGO);
 		UpdateHighScoreVisuals();
+		NewHighScore.GetComponent<CanvasGroup>().alpha = 0.0f;
 	}
 
 	public void UpdateHighScoreVisuals()
@@ -99,6 +101,8 @@ public class HighScoreTracker : MonoBehaviour
 			if (i == highScoreIndex)
 			{
 				PlayerPrefs.SetString(HighScoreNames[i], score.ToString());
+				NewHighScore.transform.position = new Vector3(NewHighScore.transform.position.x, HighscoreTexts[i].transform.position.y + 10, NewHighScore.transform.position.z);
+				NewHighScore.GetComponent<CanvasGroup>().alpha = 1.0f;
 			}
 			else
 			{
