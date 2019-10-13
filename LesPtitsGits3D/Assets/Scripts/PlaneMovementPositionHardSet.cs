@@ -3,14 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-struct FlightPath
-{
-    public Vector3 lineStart;
-    public Vector3 lineEnd;
-    public Vector3 Rotation;
-}
-
-public class PlaneMovement : MonoBehaviour
+public class PlaneMovementPositionHardSet : MonoBehaviour
 {
     private Vector3 startPosition;
     private GameObject endPositionObject;
@@ -19,8 +12,11 @@ public class PlaneMovement : MonoBehaviour
     private Vector3 midPoint;
     private Transform myTransform;
 
+    private GlobalRegion m_StartRegion;
+
     public GameObject earth;
-    public RegionData RegionSpawn;
+
+    public GlobalRegion StartRegion => m_StartRegion;
 
     private Vector3[] points = new Vector3[3];
     private FlightPath[] flightPaths = new FlightPath[lineSteps];
@@ -33,7 +29,7 @@ public class PlaneMovement : MonoBehaviour
     void Start()
     {
         myTransform = GetComponent<Transform>();
-        startPosition = myTransform.position;
+        startPosition = myTransform.localPosition;
 
         midPoint = GetLineMidPoint();     
         midPoint = GetCurveMidPoint();
@@ -64,14 +60,15 @@ public class PlaneMovement : MonoBehaviour
         currentRotation *= Quaternion.Euler(flightPaths[currentFlightIndex].Rotation);
 
         myTransform.rotation = currentRotation;
+        myTransform.localPosition = currentFlightEnd;
         myTransform.Translate(currentDirection * Time.deltaTime * 20f, Space.World);
 
-        if((currentFlightEnd - myTransform.position).magnitude < 1)
+        if((currentFlightEnd - myTransform.localPosition).magnitude < 0.05 || (currentFlightEnd - myTransform.localPosition).magnitude > 0.1)
         {
             currentFlightIndex++;
         }
 
-        if ((endPosition - myTransform.position).magnitude < 10)
+        if ((endPosition - myTransform.localPosition).magnitude < 10 / 200 || currentFlightIndex >= lineSteps)
         {
             Destroy(gameObject);
         }
@@ -140,11 +137,10 @@ public class PlaneMovement : MonoBehaviour
         return vectors[highestIndex];
     }
 
-    public void SetEndPosition(Vector3 direction, GameObject endPositionObject, RegionData regionData)
+    public void SetEndPosition(Vector3 direction, GameObject endPositionObject, GlobalRegion StartRegion)
     {
-        RegionSpawn = regionData;
         this.endPositionObject = endPositionObject;
-        this.endPosition = endPositionObject.transform.position;
+        this.endPosition = endPositionObject.transform.localPosition;
         this.direction = direction;
     }
 }

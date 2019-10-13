@@ -21,6 +21,10 @@ public class TornadoMovement : MonoBehaviour
 
     private int currentFlightIndex = 0;
 
+    private float duration = 5;
+
+    private float timeBegin = 0;
+
     private bool m_StartMoving = false;
 
     // Start is called before the first frame update
@@ -44,14 +48,12 @@ public class TornadoMovement : MonoBehaviour
 
         myTransform.localRotation = Quaternion.FromToRotation(Vector3.up, currentFlightStart);
         myTransform.localPosition = currentFlightEnd;
-        Debug.Log(currentFlightStart);
 
-        if ((currentFlightEnd - myTransform.localPosition).magnitude < 1)
-        {
-            currentFlightIndex++;
-        }
+        currentFlightIndex = (int)(lineSteps * (timeBegin / duration));
 
-        if (currentFlightIndex >= lineSteps)
+        timeBegin += Time.deltaTime;
+
+        if (timeBegin > duration)
         {
             Destroy(gameObject);
         }
@@ -87,6 +89,11 @@ public class TornadoMovement : MonoBehaviour
 
         lineSteps = (int)(baseLineSteps * (distance * 2));
 
+        if (lineSteps < baseLineSteps)
+        {
+            lineSteps = baseLineSteps;
+        }
+
         flightPaths = new FlightPath[lineSteps];
 
         midPoint = GetLineMidPoint();
@@ -95,7 +102,6 @@ public class TornadoMovement : MonoBehaviour
         points[0] = startPosition;
         points[1] = midPoint;
         points[2] = this.endPosition;
-        Debug.Log(startPosition + " mid " + midPoint + " end " + this.endPosition + " distance " + distance);
         Vector3 lineStart = GetPoint(0f);
         for (int i = 1; i <= lineSteps; i++)
         {
@@ -108,5 +114,15 @@ public class TornadoMovement : MonoBehaviour
         }
 
         m_StartMoving = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        PlaneMovement planeMovement = other.GetComponent<PlaneMovement>();
+        if (planeMovement != null)
+        {
+            GameManager.Instance.RemoveGlobalRegionPopulation(planeMovement.RegionSpawn.m_NameRegion, GameManager.Instance.PlaneScore);
+            Destroy(planeMovement.gameObject);
+        }
     }
 }
