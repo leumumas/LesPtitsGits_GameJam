@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class HighScoreTracker : MonoBehaviour
 {
 	public static HighScoreTracker Instance { get; protected set; }
-	public GameObject highScoreTrackerGO;
+	public GameObject HighScoreTrackerGO;
+	public GameObject HighScoreCanvas;
+	public List<Text> HighscoreTexts;
 
 	private List<string> HighScoreNames = new List<string>
 	{
@@ -18,7 +20,7 @@ public class HighScoreTracker : MonoBehaviour
 		"HighScore7",
 		"HighScore8",
 		"HighScore9",
-		"HighScore10",
+		"HighScore10"
 	};
 
 	private void OnEnable()
@@ -30,22 +32,78 @@ public class HighScoreTracker : MonoBehaviour
 
 		Instance = this;
 
-		DontDestroyOnLoad(highScoreTrackerGO);
+		DontDestroyOnLoad(HighScoreCanvas);
+		DontDestroyOnLoad(HighScoreTrackerGO);
+		UpdateHighScoreVisuals();
 	}
 
-	private bool CheckIfHighScoreWasBested(long currentScore)
+	public void UpdateHighScoreVisuals()
 	{
-		List<string> reversedHighscores = HighScoreNames;
-		reversedHighscores.Reverse();
-
-		foreach (string score in reversedHighscores)
+		foreach (Text textGO in HighscoreTexts)
 		{
-			if (currentScore > long.Parse(PlayerPrefs.GetString(score)))
+			string score = PlayerPrefs.GetString(textGO.name, "");
+			textGO.text = score;
+			if (score == "")
 			{
-				return true;
+				PlayerPrefs.SetString(textGO.name, "0");
 			}
 		}
+	}
 
-		return false;
+	private void Update()
+	{
+		if (Input.GetKeyDown("r"))
+		{
+			//  CAREFULL WITH THIS, IT RESETS ALL HIGHSCORES
+			Debug.Log("ScoreController::Update(): You've resetted all highscores saved");
+			PlayerPrefs.DeleteAll();
+		}
+	}
+
+	public void EndGameNewScore(long score)
+	{
+		HighScoreCanvas.SetActive(true);
+		int highScoreIndex = CheckIfHighScoreWasBested(score);
+		if (highScoreIndex != -1)
+		{
+			UpdateHighScoreOrder(highScoreIndex, score);
+			UpdateHighScoreVisuals();
+		}
+	}
+
+	public void GameStart()
+	{
+		HighScoreCanvas.SetActive(false);
+	}
+
+	public int CheckIfHighScoreWasBested(long gameScore)
+	{
+		int scoreIndex = 0;
+
+		foreach (string score in HighScoreNames)
+		{
+			if (gameScore > long.Parse(PlayerPrefs.GetString(score)))
+			{
+				return scoreIndex;
+			}
+			scoreIndex++;
+		}
+
+		return -1;
+	}
+
+	private void UpdateHighScoreOrder(int highScoreIndex, long score)
+	{
+		for (int i = (HighScoreNames.Count - 1); i > (highScoreIndex - 1); i--)
+		{
+			if (i == highScoreIndex)
+			{
+				PlayerPrefs.SetString(HighScoreNames[i], score.ToString());
+			}
+			else
+			{
+				PlayerPrefs.SetString(HighScoreNames[i], PlayerPrefs.GetString(HighScoreNames[i - 1]));
+			}
+		}
 	}
 }

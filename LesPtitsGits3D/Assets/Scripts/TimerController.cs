@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
@@ -36,11 +37,10 @@ public class TimerController : MonoBehaviour
 			TimerText.fontSize--;
 		}
 
-		if (Year >= 2119)
+		if (Year >= 2039)
 		{
-			//TODO implement endgame? stream to endgame Screen ?
-
-			Debug.Log("GAME END SHOULD HAVE BEEN ACTIVATED AT YEAR 2019");
+			ScoreController.Instance.EndGame();
+			SceneManager.LoadScene("TitleScreen");
 		}
 	}
 
