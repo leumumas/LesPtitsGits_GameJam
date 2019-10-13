@@ -54,12 +54,15 @@ public class EarthControl : MonoBehaviour
 
     void Update() 
     {
+        bool Change = false;
         if (Input.GetButtonDown("ZoomIn"))
         {
             StartTime = Time.time;
             journeyLength = Math.Abs(MainCamera.transform.position.z - CloseValueCamera);
             StartPosition = MainCamera.transform.position;
             EndPosition = ClosePosition;
+            m_IsZoomOut = false;
+            Change = true;
         }
 
         if (Input.GetButtonDown("ZoomOut"))
@@ -68,6 +71,8 @@ public class EarthControl : MonoBehaviour
             journeyLength = Math.Abs(MainCamera.transform.position.z - FarValueCamera);
             StartPosition = MainCamera.transform.position;
             EndPosition = FarPosition;
+            m_IsZoomOut = true;
+            Change = true;
         }
 
         float distCovered = (Time.time - StartTime) * speedZoom;
@@ -89,9 +94,9 @@ public class EarthControl : MonoBehaviour
         if (Physics.Raycast(ray, out raycastHit))
         {
             GlobalRegion globalRegion = raycastHit.collider.GetComponent<GlobalRegion>();
-            if (globalRegion != null && globalRegion != m_LastRegion)
+            if (globalRegion != null && (globalRegion != m_LastRegion || Change))
             {
-                if (m_IsZoomOut && m_LastRegion != null)
+                if (m_LastRegion != null)
                 {
                     RegionHandler.Instance.RegionOver(m_LastRegion, true);
                 }
@@ -109,6 +114,11 @@ public class EarthControl : MonoBehaviour
             {
                 SpawnTornado(raycastHit.point, raycastHit.normal);
             }
+
+            if (Input.GetButtonUp("Submit") && m_CanSpawnTornado)
+            {
+                SetTornado(raycastHit.point, raycastHit.normal);
+            }
         }
     }
 
@@ -121,5 +131,17 @@ public class EarthControl : MonoBehaviour
 
         m_CurrentTornado = Instantiate(m_Tornado, i_HitPosition, Quaternion.FromToRotation(Vector3.up, i_HitNormal), this.transform);
         m_CurrentTornado.transform.localScale = m_TornadoScale;
+    }
+
+    private void SetTornado(Vector3 i_HitPosition, Vector3 i_HitNormal)
+    {
+        if (m_CurrentTornado == null)
+        {
+            return;
+        }
+
+        TornadoMovement tornadoMovement = m_CurrentTornado.GetComponent<TornadoMovement>();
+        tornadoMovement.earth = gameObject;
+        tornadoMovement.SetEndPosition(Vector3.zero, i_HitPosition);
     }
 }

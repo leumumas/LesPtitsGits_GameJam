@@ -1,0 +1,112 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TornadoMovement : MonoBehaviour
+{
+    private Vector3 startPosition;
+    private GameObject endPositionObject;
+    private Vector3 endPosition;
+    private Vector3 direction;
+    private Vector3 midPoint;
+    private Transform myTransform;
+
+    public GameObject earth;
+
+    private Vector3[] points = new Vector3[3];
+    private FlightPath[] flightPaths;
+
+    private const int baseLineSteps = 100;
+    private int lineSteps = 0;
+
+    private int currentFlightIndex = 0;
+
+    private bool m_StartMoving = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (myTransform == null)
+        {
+            return;
+        }
+        Vector3 currentFlightStart = flightPaths[currentFlightIndex].lineStart;
+        Vector3 currentFlightEnd = flightPaths[currentFlightIndex].lineEnd;
+        Vector3 currentDirection = (currentFlightEnd - currentFlightStart).normalized;
+        Quaternion currentRotation = Quaternion.LookRotation(currentDirection);
+
+        currentRotation *= Quaternion.Euler(-flightPaths[currentFlightIndex].Rotation);
+
+        myTransform.localRotation = Quaternion.FromToRotation(Vector3.up, currentFlightStart);
+        myTransform.localPosition = currentFlightStart;
+        Debug.Log(currentFlightStart);
+
+        if ((currentFlightEnd - myTransform.localPosition).magnitude < 1)
+        {
+            currentFlightIndex++;
+        }
+
+        if (currentFlightIndex >= lineSteps)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    Vector3 GetPoint(float t)
+    {
+        return Vector3.Lerp(Vector3.Lerp(points[0], points[1], t), Vector3.Lerp(points[1], points[2], t), t);
+    }
+
+    Vector3 GetLineMidPoint()
+    {
+        return new Vector3((startPosition.x + endPosition.x) / 2, (startPosition.y + endPosition.y) / 2, (startPosition.z + endPosition.z) / 2);
+    }
+
+    Vector3 GetCurveMidPoint()
+    {
+        return midPoint.normalized * RegionHandler.Instance.RadiusEarth;
+    }
+
+    public void SetEndPosition(Vector3 direction, Vector3 endPosition)
+    {
+        myTransform = GetComponent<Transform>();
+        /*Vector3 baseEulerAngle = (earth.transform.localEulerAngles * (Mathf.PI / 180)).normalized;
+        Vector3 basePosition = earth.transform.InverseTransformPoint(endPosition).normalized;
+        Vector3 newPosition = endPosition + baseEulerAngle;*/
+        Vector3 newPosition = Quaternion.Inverse(earth.transform.localRotation) * endPosition;  //endPosition * earth.transform.rotation;
+        this.endPosition = newPosition * RegionHandler.Instance.RadiusEarth;
+        this.direction = direction;
+        startPosition = myTransform.localPosition;
+
+        float distance = Vector3.Distance(this.endPosition, startPosition);
+
+        lineSteps = (int)(baseLineSteps * distance * 2);
+
+        flightPaths = new FlightPath[lineSteps];
+
+        midPoint = GetLineMidPoint();
+        midPoint = GetCurveMidPoint();
+
+        points[0] = startPosition;
+        points[1] = midPoint;
+        points[2] = this.endPosition;
+        Debug.Log(startPosition + " mid " + midPoint + " end " + this.endPosition + " distance " + distance);
+        Vector3 lineStart = GetPoint(0f);
+        for (int i = 1; i <= lineSteps; i++)
+        {
+            float currentT = i / (float)lineSteps;
+            Vector3 lineEnd = GetPoint(currentT);
+            flightPaths[i - 1].lineStart = lineStart;
+            flightPaths[i - 1].lineEnd = lineEnd;
+            flightPaths[i - 1].Rotation = Quaternion.FromToRotation(Vector3.down, lineStart).eulerAngles;
+            lineStart = lineEnd;
+        }
+
+        m_StartMoving = true;
+    }
+}
