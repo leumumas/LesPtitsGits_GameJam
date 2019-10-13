@@ -5,6 +5,11 @@ using UnityEngine;
 public class TornadoMovement : MonoBehaviour
 {
     [SerializeField]
+    private int tickCausalitiesMin;
+    [SerializeField]
+    private int tickCausalitiesMax;
+    [SerializeField]
+    private int PlaneCausalities;
     private Vector3 startPosition;
     private GameObject endPositionObject;
     private Vector3 endPosition;
@@ -27,6 +32,8 @@ public class TornadoMovement : MonoBehaviour
     private float timeBegin = 0;
 
     private bool m_StartMoving = false;
+
+    private GlobalRegion m_GlobalRegion;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +65,10 @@ public class TornadoMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else
+        {
+            GameManager.Instance.RemoveGlobalRegionPopulation(m_GlobalRegion.NameRegion, Random.Range(tickCausalitiesMin, tickCausalitiesMax));
+        }
     }
 
     Vector3 GetPoint(float t)
@@ -75,8 +86,9 @@ public class TornadoMovement : MonoBehaviour
         return midPoint.normalized;
     }
 
-    public void SetEndPosition(Vector3 direction, Vector3 endPosition, bool i_ShouldMove)
+    public void SetEndPosition(Vector3 direction, Vector3 endPosition, bool i_ShouldMove, GlobalRegion i_GlobalRegion)
     {
+        m_GlobalRegion = i_GlobalRegion;
         myTransform = GetComponent<Transform>();
         /*Vector3 baseEulerAngle = (earth.transform.localEulerAngles * (Mathf.PI / 180)).normalized;
         Vector3 basePosition = earth.transform.InverseTransformPoint(endPosition).normalized;
