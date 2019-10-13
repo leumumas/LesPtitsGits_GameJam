@@ -25,9 +25,10 @@ public class PanelRegion : MonoBehaviour
             animatorPanel.SetBool("Out", true);
             return;
         }
-        m_NameRegion.text = i_GlobalRegion.NameRegion;
+        GlobalRegionInfo regionInfo = GameManager.Instance.GetGlobalRegionInfo(i_GlobalRegion.NameRegion);
+        m_NameRegion.text = regionInfo.NameRegion;
         //m_Population.text = i_GlobalRegion.Population.ToString("# #");
-        m_Population.text = string.Format("{0:#,0}", i_GlobalRegion.Population);
+        m_Population.text = string.Format("{0:#,0}", regionInfo.Population);
 
         animatorPanel.SetBool("Out", i_IsOut);
     }

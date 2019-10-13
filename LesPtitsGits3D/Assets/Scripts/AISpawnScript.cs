@@ -90,7 +90,7 @@ public class AISpawnScript : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(lookAt);
 
             GameObject newPlane = Instantiate(planePrefab, startPosition.transform.position, targetRotation);
-            newPlane.GetComponent<PlaneMovement>().SetEndPosition(lookAt, endPosition);
+            newPlane.GetComponent<PlaneMovement>().SetEndPosition(lookAt, endPosition, startPosition.GetComponent<SpawnLocationInfo>().spawnRegionLocation);
         }
     }
 }

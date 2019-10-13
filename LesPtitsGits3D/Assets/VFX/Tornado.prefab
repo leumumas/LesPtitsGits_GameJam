@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 624090271566913746}
   - component: {fileID: 9111330540127469811}
   - component: {fileID: -8441312019430683658}
+  - component: {fileID: 5586023875521935782}
   m_Layer: 0
   m_Name: Tornado
   m_TagString: Untagged
@@ -4767,3 +4768,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   earth: {fileID: 0}
+--- !u!136 &5586023875521935782
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646904853326980480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.01915
+  m_Height: 0.0741
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.03, z: 0}
