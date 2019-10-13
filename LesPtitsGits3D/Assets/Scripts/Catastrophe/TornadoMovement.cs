@@ -46,7 +46,7 @@ public class TornadoMovement : MonoBehaviour
 
         currentRotation *= Quaternion.Euler(-flightPaths[currentFlightIndex].Rotation);
 
-        myTransform.localRotation = Quaternion.FromToRotation(Vector3.up, currentFlightStart);
+        myTransform.localRotation = Quaternion.FromToRotation(Vector3.up, currentFlightEnd);
         myTransform.localPosition = currentFlightEnd;
 
         currentFlightIndex = (int)(lineSteps * (timeBegin / duration));
