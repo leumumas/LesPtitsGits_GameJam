@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
 	private float EarthquakeCooldown = 2.5f;
 	private float timeEarthquakeCooldown = 0f;
 	private bool isEarthquakeOnCooldown = false;
+    [SerializeField]
+    private GameObject m_EarthQuake;
 
     private GameObject m_CurrentTornado;
     private Vector3 m_TornadoScale = new Vector3(4f, 4f, 4f);
@@ -45,16 +47,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
 	{
         // Button "Submit" is also Gamepad 0 which is the A button on a controller.
-        /*if (Input.GetButtonDown("Submit") && !isTornadoOnCooldown)
-		{
-			// Just test stuff and add score when pressing the gamepad A button
-			//Debug.Log("Click! + 1 000 000 000  casualties");
-			//FindObjectOfType<ScoreController>().AddCasualtiesToScore(1000000000);
 
-			// TODO match the Torando action with the A Button
-			isTornadoOnCooldown = true;
-			TornadoButton.GetComponent<Image>().material = ButtonOnCooldown;
-        }*/
+        bool canTornado = RegionHandler.Instance.CurrentGlobalRegion.Tornado;
+        bool canEarthQuake = RegionHandler.Instance.CurrentGlobalRegion.EarthQuake;
+        bool canVolcano = RegionHandler.Instance.CurrentGlobalRegion.Volcano;
 
 
         ray = new Ray(MainCamera.transform.position, MainCamera.transform.forward);
@@ -80,20 +76,18 @@ public class PlayerController : MonoBehaviour
                     shouldMove = false;
                 }
                 SetTornado(endPosition, raycastHit.normal, shouldMove);
-                TornadoButton.GetComponent<Image>().material = ButtonOnCooldown;
                 m_CurrentTornado = null;
             }
 
-            if (Input.GetButtonDown("Cancel") && !isVolcanoOnCooldown)
+            if (Input.GetButtonDown("Cancel") && !isVolcanoOnCooldown && canVolcano)
             {
                 isVolcanoOnCooldown = true;
-                VolcanoButton.GetComponent<Image>().material = ButtonOnCooldown;
             }
 
-            if (Input.GetButtonDown("Fire3") && !isEarthquakeOnCooldown)
+            if (Input.GetButtonDown("Fire3") && !isEarthquakeOnCooldown && canEarthQuake)
             {
                 isEarthquakeOnCooldown = true;
-                EarthquakeButton.GetComponent<Image>().material = ButtonOnCooldown;
+                SpawnEarthQuake(raycastHit.point, raycastHit.normal);
             }
         }
 
@@ -119,22 +113,22 @@ public class PlayerController : MonoBehaviour
 		{
 			timeTornadoCooldown = 0f;
 			isTornadoOnCooldown = false;
-			TornadoButton.GetComponent<Image>().material = ButtonReady;
 		}
 
 		if (isVolcanoOnCooldown && timeVolcanoCooldown >= VolcanoCooldown)
 		{
 			timeVolcanoCooldown = 0f;
 			isVolcanoOnCooldown = false;
-			VolcanoButton.GetComponent<Image>().material = ButtonReady;
 		}
 
 		if (isEarthquakeOnCooldown && timeEarthquakeCooldown >= EarthquakeCooldown)
 		{
 			timeEarthquakeCooldown = 0f;
 			isEarthquakeOnCooldown = false;
-			EarthquakeButton.GetComponent<Image>().material = ButtonReady;
-		}
+        }
+        TornadoButton.GetComponent<Image>().material = isTornadoOnCooldown || !canTornado ? ButtonOnCooldown : ButtonReady;
+        EarthquakeButton.GetComponent<Image>().material = isEarthquakeOnCooldown || !canEarthQuake ? ButtonOnCooldown : ButtonReady;
+        VolcanoButton.GetComponent<Image>().material = isVolcanoOnCooldown || !canVolcano ? ButtonOnCooldown : ButtonReady;
     }
 
     private void SpawnTornado(Vector3 i_HitPosition, Vector3 i_HitNormal)
@@ -153,5 +147,11 @@ public class PlayerController : MonoBehaviour
         TornadoMovement tornadoMovement = m_CurrentTornado.GetComponent<TornadoMovement>();
         tornadoMovement.earth = EarthTransform.gameObject;
         tornadoMovement.SetEndPosition(Vector3.zero, i_HitPosition, i_ShouldMove);
+    }
+
+    private void SpawnEarthQuake(Vector3 i_HitPosition, Vector3 i_HitNormal)
+    {
+        EarthQuake earthQuake = Instantiate(m_EarthQuake, i_HitPosition, Quaternion.FromToRotation(Vector3.up, i_HitNormal), EarthTransform.transform).GetComponent<EarthQuake>();
+        earthQuake.SetEarthQuake(RegionHandler.Instance.CurrentGlobalRegion);
     }
 }
