@@ -75,12 +75,6 @@ public class ScoreController : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.GetMouseButtonUp(0))
-		{
-			Debug.Log("Click! + 1 000 000 000  casualties");
-			AddCasualtiesToScore(1000000000);
-		}
-
 		if (Input.GetKeyDown("r"))
 		{
 			//  CAREFULL WITH THIS, IT RESETS ALL HIGHSCORES
