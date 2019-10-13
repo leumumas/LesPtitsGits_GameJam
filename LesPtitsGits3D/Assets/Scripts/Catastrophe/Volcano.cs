@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EarthQuake : MonoBehaviour
+public class Volcano : MonoBehaviour
 {
     [SerializeField]
     private float duration;
@@ -27,17 +27,21 @@ public class EarthQuake : MonoBehaviour
         {
             return;
         }
-        if ((Time.time - startTime) > duration)
+
+        float totalTime = Time.time - startTime;
+        float remainingTime = duration - totalTime;
+
+        if (totalTime > duration)
         {
             Destroy(gameObject);
         }
         else
         {
-            GameManager.Instance.RemoveGlobalRegionPopulation(m_GlobalRegion.NameRegion, Random.Range(tickCausalitiesMin, tickCausalitiesMax));
+            GameManager.Instance.RemoveGlobalRegionPopulation(m_GlobalRegion.NameRegion, (int)(Random.Range(tickCausalitiesMin, tickCausalitiesMax) * (remainingTime / duration)));
         }
     }
 
-    public void SetEarthQuake(GlobalRegion i_GlobalRegion)
+    public void SetVolcano(GlobalRegion i_GlobalRegion)
     {
         m_GlobalRegion = i_GlobalRegion;
         startTime = Time.time;

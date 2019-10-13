@@ -74,16 +74,16 @@ public class TornadoMovement : MonoBehaviour
         return midPoint.normalized;
     }
 
-    public void SetEndPosition(Vector3 direction, Vector3 endPosition)
+    public void SetEndPosition(Vector3 direction, Vector3 endPosition, bool i_ShouldMove)
     {
         myTransform = GetComponent<Transform>();
         /*Vector3 baseEulerAngle = (earth.transform.localEulerAngles * (Mathf.PI / 180)).normalized;
         Vector3 basePosition = earth.transform.InverseTransformPoint(endPosition).normalized;
         Vector3 newPosition = endPosition + baseEulerAngle;*/
-        Vector3 newPosition = (Quaternion.Inverse(earth.transform.localRotation) * endPosition).normalized;  //endPosition * earth.transform.rotation;
+        startPosition = myTransform.localPosition;
+        Vector3 newPosition = i_ShouldMove ? (Quaternion.Inverse(earth.transform.localRotation) * endPosition).normalized : startPosition;  //endPosition * earth.transform.rotation;
         this.endPosition = newPosition;
         this.direction = direction;
-        startPosition = myTransform.localPosition;
 
         float distance = Vector3.Distance(this.endPosition, startPosition);
 
