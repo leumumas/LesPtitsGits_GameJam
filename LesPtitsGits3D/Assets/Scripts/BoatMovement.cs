@@ -44,7 +44,7 @@ public class BoatMovement : MonoBehaviour
                 lookAt = lookAt.normalized;
                 myTransform.rotation = targetRotation;
             }
-        }       
+        }
     }
 
     public void SetPath(Vector3 direction, GameObject[] pathToUse)
