@@ -14,24 +14,8 @@ public class ScoreController : MonoBehaviour
 	void Start()
 	{
 		currentScore = 0;
-		currentScoreText.text = currentScore == 0 ? "" : currentScore.ToString();
+		currentScoreText.text = currentScore.ToString();
 		UpdateHighScoreVisuals();
-
-		if (PlayerPrefs.GetString("HighScore3", "") == "")
-		{
-			PlayerPrefs.SetString("HighScore3", "0");
-
-			if (PlayerPrefs.GetString("HighScore2", "") == "")
-			{
-				PlayerPrefs.SetString("HighScore2", "0");
-
-				if (PlayerPrefs.GetString("HighScore", "") == "")
-				{
-					PlayerPrefs.SetString("HighScore", "0");
-				}
-			}
-		}
-
 	}
 
 	public void AddCasualtiesToScore(int casualties)
