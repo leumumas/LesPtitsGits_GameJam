@@ -37,7 +37,7 @@ public class TimerController : MonoBehaviour
 			TimerText.fontSize--;
 		}
 
-		if (Year >= 2039)
+		if (Year >= 2119)
 		{
 			ScoreController.Instance.EndGame();
 			SceneManager.LoadScene("TitleScreen");
