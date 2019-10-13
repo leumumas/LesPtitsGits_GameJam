@@ -20,9 +20,8 @@ public class AISpawnScript : MonoBehaviour
     {
         spawnTimer = Time.deltaTime;
 
-        //boatAiLocations = GameObject.FindGameObjectsWithTag("BoatLocation");
+        boatAiLocations = GameObject.FindGameObjectsWithTag("BoatLocation");
         planeAiLocations = GameObject.FindGameObjectsWithTag("PlaneLocation");
-       // carAiLocations = GameObject.FindGameObjectsWithTag("CarLocation");
     }
 
     // Update is called once per frame
@@ -38,10 +37,12 @@ public class AISpawnScript : MonoBehaviour
 
     void SpawnMayhem()
     {
-        int nbBoatsToSpawn = rnd.Next(0, 2);
+        int nbBoatsToSpawn = rnd.Next(1, 2);
         int nbPlanesToSpawn = rnd.Next(1, 2);
         int nbCarsToSpawn = rnd.Next(0, 2);
 
+
+        SpawnBoats(nbBoatsToSpawn);
         SpawnPlanes(nbPlanesToSpawn);
     }
 
@@ -54,19 +55,15 @@ public class AISpawnScript : MonoBehaviour
 
         for (int i = 0; i < numberToSpawn; i++)
         {
-            GameObject startPosition = boatAiLocations[rnd.Next(0, boatAiLocations.Length)];
-            GameObject endPosition;
+            GameObject PortToStartAt = boatAiLocations[rnd.Next(0, boatAiLocations.Length)];
 
-            do
-            {
-                endPosition = boatAiLocations[rnd.Next(0, boatAiLocations.Length)];
-            } while (startPosition == endPosition);
+            GameObject[] pathToTake = PortToStartAt.GetComponent<PortPaths>().GetPath();
 
-            Vector3 lookAt = endPosition.transform.position - startPosition.transform.position;
+            Vector3 lookAt = pathToTake[0].transform.position - PortToStartAt.transform.position;
             Quaternion targetRotation = Quaternion.LookRotation(lookAt);
             
-            GameObject newBoat = Instantiate(boatPrefab, startPosition.transform.position, targetRotation);
-            newBoat.GetComponent<BoatMovement>().SetEndPosition(lookAt, endPosition.transform.position);
+            GameObject newBoat = Instantiate(boatPrefab, PortToStartAt.transform.position, targetRotation);
+            newBoat.GetComponent<BoatMovement>().SetPath(lookAt, pathToTake);
         }
     }
 

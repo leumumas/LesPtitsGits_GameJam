@@ -48,7 +48,7 @@ public class PlaneMovement : MonoBehaviour
             Vector3 lineEnd = GetPoint(currentT);
             flightPaths[i - 1].lineStart = lineStart;
             flightPaths[i - 1].lineEnd = lineEnd;
-            flightPaths[i - 1].Rotation = new Vector3(0f,0f,0f);
+            flightPaths[i - 1].Rotation = lineStart - new Vector3(0f,0f,0f);
             lineStart = lineEnd;
         }
     }
@@ -59,10 +59,7 @@ public class PlaneMovement : MonoBehaviour
         Vector3 currentFlightStart = flightPaths[currentFlightIndex].lineStart;
         Vector3 currentFlightEnd = flightPaths[currentFlightIndex].lineEnd;
         Vector3 currentDirection = (currentFlightEnd - currentFlightStart).normalized;
-        Quaternion currentRotation = Quaternion.LookRotation(currentDirection);
-
-        currentRotation *= Quaternion.Euler(flightPaths[currentFlightIndex].Rotation);
-
+        Quaternion currentRotation = Quaternion.LookRotation(currentDirection, flightPaths[currentFlightIndex].Rotation);
         myTransform.rotation = currentRotation;
         myTransform.Translate(currentDirection * Time.deltaTime * 20f, Space.World);
 
