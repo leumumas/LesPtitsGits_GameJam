@@ -5,12 +5,15 @@ public class ScoreController : MonoBehaviour
 {
 	public static ScoreController Instance { get; protected set; }
 	public Text currentScoreText;
+	public Image NewHighScore;
 
 	long currentScore;
 
 	private void OnEnable()
 	{
 		Instance = this;
+
+		NewHighScore.GetComponent<CanvasGroup>().alpha = 0.0f;
 	}
 
 	void Start()
@@ -23,6 +26,11 @@ public class ScoreController : MonoBehaviour
 	{
 		currentScore += casualties;
 		currentScoreText.text = currentScore.ToString();
+
+		if (HighScoreTracker.Instance.CheckIfHighScoreWasBested(currentScore) != -1)
+		{
+			NewHighScore.GetComponent<CanvasGroup>().alpha = 1.0f;
+		}
 	}
 
 	private void Update()
@@ -37,5 +45,6 @@ public class ScoreController : MonoBehaviour
 	public void EndGame()
 	{
 		HighScoreTracker.Instance.EndGameNewScore(currentScore);
+		NewHighScore.GetComponent<CanvasGroup>().alpha = 0.0f;
 	}
 }
