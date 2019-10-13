@@ -46,10 +46,11 @@ public class GameManager : Singleton<GameManager>
     {
         GlobalRegionInfo globalRegionInfo = GetGlobalRegionInfo(i_RegionName);
         globalRegionInfo.Population -= i_PopulationRemoved;
-        m_ScoreController.AddCasualtiesToScore(i_PopulationRemoved);
         if (globalRegionInfo.Population < 0)
         {
+            i_PopulationRemoved += (int)globalRegionInfo.Population;
             globalRegionInfo.Population = 0;
         }
+        m_ScoreController.AddCasualtiesToScore(i_PopulationRemoved);
     }
 }

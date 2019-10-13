@@ -4768,6 +4768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1794bc07cb35d419becb78f1fb2988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tickCausalitiesMin: 25000
+  tickCausalitiesMax: 50000
+  PlaneCausalities: 2000
   earth: {fileID: 0}
 --- !u!136 &5586023875521935782
 CapsuleCollider:
