@@ -10,6 +10,7 @@ public class RegionHandler : Singleton<RegionHandler>
     private float m_RadiusEarth = 1f;
 
     public float RadiusEarth => m_RadiusEarth;
+    public GlobalRegion CurrentGlobalRegion { get; set; }
 
     public void RegionOver(GlobalRegion i_GlobalRegion, bool i_IsOut)
     {

@@ -132,6 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37adbc6135b9d764c85a59ffc10d32f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &56398343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7452449619221369366, guid: 84c8b58fb1635c442ab3cee11282eac5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1273065419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &64928926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,6 +242,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 558e93b11eaa50244bc8221340d42057, type: 3}
+--- !u!1 &164164326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7999220930328096990, guid: 181d78b3ef0d6014abf473821687f953,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202852886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &201631068
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +321,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201631068}
   m_CullTransparentMesh: 0
+--- !u!1 &277321518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7999220930183495072, guid: 181d78b3ef0d6014abf473821687f953,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202852886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302522336
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +493,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &642243512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7999220930291341599, guid: 181d78b3ef0d6014abf473821687f953,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202852886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &682157107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -775,6 +799,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1273065419}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1177065331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177065333}
+  - component: {fileID: 1177065332}
+  m_Layer: 0
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1177065332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177065331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f165f6439bcf0d94daf8733f5caf7dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonOnCooldown: {fileID: 2100000, guid: 25e88be070c0f704ea9aad135d3b4ab3, type: 2}
+  ButtonReady: {fileID: 2100000, guid: a3d310c935137144f9f9f89f944b346f, type: 2}
+  TornadoButton: {fileID: 642243512}
+  VolcanoButton: {fileID: 277321518}
+  EarthquakeButton: {fileID: 164164326}
+  TornadoCooldown: 2.5
+  m_Tornado: {fileID: 1646904853326980480, guid: bbe8a1fb940657a47bf2a9408b20fb56,
+    type: 3}
+  EarthTransform: {fileID: 56398343}
+  VolcanoCooldown: 2.5
+  EarthquakeCooldown: 2.5
+--- !u!4 &1177065333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177065331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -413.4068, y: -202.92186, z: 617.5033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1202852886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1482,6 +1560,11 @@ PrefabInstance:
     - target: {fileID: 4241344800908959100, guid: 84c8b58fb1635c442ab3cee11282eac5,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 792896254163712118, guid: 84c8b58fb1635c442ab3cee11282eac5,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

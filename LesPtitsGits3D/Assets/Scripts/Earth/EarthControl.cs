@@ -32,14 +32,6 @@ public class EarthControl : MonoBehaviour
     private GlobalRegion m_LastRegion;
 
     private bool m_IsZoomOut = true;
-
-    private bool m_CanSpawnTornado = true;
-    private bool m_CanSpawnEarthQuake = true;
-    private bool m_CanSpawnVolcano = true;
-
-    private GameObject m_CurrentTornado;
-    private Vector3 m_TornadoScale= new Vector3(4f, 4f, 4f);
-    private Vector3 m_TornadoRotation = new Vector3(0f, 0f, 0f);
     
     private void Start()
     {
@@ -84,8 +76,8 @@ public class EarthControl : MonoBehaviour
             MainCamera.transform.position = Vector3.Lerp(StartPosition, EndPosition, fractionOfJourney);
         }
 
-        float translation = -Input.GetAxis("Vertical") * speed;
-        float rotation = Input.GetAxis("Horizontal") * speed;
+        float translation = -Input.GetAxis("Vertical") * (m_IsZoomOut ? speed : speed / 2);
+        float rotation = Input.GetAxis("Horizontal") * (m_IsZoomOut ? speed : speed / 2);
 
         transform.Rotate(Vector3.up, rotation * Time.deltaTime, Space.World);
         transform.Rotate(Vector3.right, translation * Time.deltaTime, Space.World);
@@ -105,43 +97,8 @@ public class EarthControl : MonoBehaviour
                 {
                     RegionHandler.Instance.RegionOver(m_LastRegion, false);
                 }
-                m_CanSpawnTornado = m_LastRegion.Tornado;
-                m_CanSpawnVolcano = m_LastRegion.Volcano;
-                m_CanSpawnEarthQuake = m_LastRegion.EarthQuake;
-            }
-
-            if (Input.GetButtonDown("Submit") && m_CanSpawnTornado)
-            {
-                SpawnTornado(raycastHit.point, raycastHit.normal);
-            }
-
-            if (Input.GetButtonUp("Submit") && m_CanSpawnTornado)
-            {
-                SetTornado(raycastHit.point, raycastHit.normal);
+                RegionHandler.Instance.CurrentGlobalRegion = m_LastRegion;
             }
         }
-    }
-
-    private void SpawnTornado(Vector3 i_HitPosition, Vector3 i_HitNormal)
-    {
-        if (m_CurrentTornado != null)
-        {
-            Destroy(m_CurrentTornado);
-        }
-
-        m_CurrentTornado = Instantiate(m_Tornado, i_HitPosition, Quaternion.FromToRotation(Vector3.up, i_HitNormal), this.transform);
-        m_CurrentTornado.transform.localScale = m_TornadoScale;
-    }
-
-    private void SetTornado(Vector3 i_HitPosition, Vector3 i_HitNormal)
-    {
-        if (m_CurrentTornado == null)
-        {
-            return;
-        }
-
-        TornadoMovement tornadoMovement = m_CurrentTornado.GetComponent<TornadoMovement>();
-        tornadoMovement.earth = gameObject;
-        tornadoMovement.SetEndPosition(Vector3.zero, i_HitPosition);
     }
 }
