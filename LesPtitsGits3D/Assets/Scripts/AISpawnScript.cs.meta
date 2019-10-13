@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - boatPrefab: {fileID: 1404434379067854, guid: a89eef680e28b83449e3a6ba46792fbe,
       type: 3}
+  - planePrefab: {fileID: 103844, guid: a8ef9e2d88c66b546a6fc8dfeed1c8ca, type: 3}
   executionOrder: 0
   icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   userData: 
