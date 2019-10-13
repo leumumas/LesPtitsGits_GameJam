@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NameRegion: Ocean
   m_Population: 0
-  m_Tornado: 0
+  m_Tornado: 1
   m_Volcano: 0
   m_EarthQuake: 0

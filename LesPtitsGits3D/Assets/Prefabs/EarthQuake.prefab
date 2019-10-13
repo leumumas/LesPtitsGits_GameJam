@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 5
-  tickCausalitiesMin: 5
-  tickCausalitiesMax: 10
+  tickCausalitiesMin: 1500
+  tickCausalitiesMax: 3000
 --- !u!82 &8088051702610286062
 AudioSource:
   m_ObjectHideFlags: 0

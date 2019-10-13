@@ -79,6 +79,6 @@ public class TornadoAbility : MonoBehaviour
 
         TornadoMovement tornadoMovement = m_CurrentTornado.GetComponent<TornadoMovement>();
         tornadoMovement.earth = gameObject;
-        tornadoMovement.SetEndPosition(Vector3.zero, i_HitPosition, true);
+        //tornadoMovement.SetEndPosition(Vector3.zero, i_HitPosition, true, );
     }
 }

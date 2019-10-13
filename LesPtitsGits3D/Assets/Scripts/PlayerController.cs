@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
 
         TornadoMovement tornadoMovement = m_CurrentTornado.GetComponent<TornadoMovement>();
         tornadoMovement.earth = EarthTransform.gameObject;
-        tornadoMovement.SetEndPosition(Vector3.zero, i_HitPosition, i_ShouldMove);
+        tornadoMovement.SetEndPosition(Vector3.zero, i_HitPosition, i_ShouldMove, RegionHandler.Instance.CurrentGlobalRegion);
     }
 
     private void SpawnEarthQuake(Vector3 i_HitPosition, Vector3 i_HitNormal)
