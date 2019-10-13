@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TornadoMovement : MonoBehaviour
 {
+    [SerializeField]
     private Vector3 startPosition;
     private GameObject endPositionObject;
     private Vector3 endPosition;
@@ -119,10 +120,16 @@ public class TornadoMovement : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlaneMovement planeMovement = other.GetComponent<PlaneMovement>();
+        BoatMovement boatMovement = other.GetComponent<BoatMovement>();
         if (planeMovement != null)
         {
             GameManager.Instance.RemoveGlobalRegionPopulation(planeMovement.RegionSpawn.m_NameRegion, GameManager.Instance.PlaneScore);
             Destroy(planeMovement.gameObject);
+        }
+        if (boatMovement != null)
+        {
+            GameManager.Instance.RemoveGlobalRegionPopulation("Asia", GameManager.Instance.PlaneScore);
+            Destroy(boatMovement.gameObject);
         }
     }
 }
