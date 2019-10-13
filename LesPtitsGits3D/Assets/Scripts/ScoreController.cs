@@ -1,69 +1,41 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
+	public static ScoreController Instance { get; protected set; }
 	public Text currentScoreText;
-	public Text HighScoreText;
-	public Text HighScore2Text;
-	public Text HighScore3Text;
 
 	long currentScore;
+
+	private void OnEnable()
+	{
+		Instance = this;
+	}
 
 	void Start()
 	{
 		currentScore = 0;
 		currentScoreText.text = currentScore.ToString();
-		UpdateHighScoreVisuals();
 	}
 
 	public void AddCasualtiesToScore(int casualties)
 	{
 		currentScore += casualties;
 		currentScoreText.text = currentScore.ToString();
-
-		if (CheckIfHighScoreWasBested())
-		{
-			UpdateHighScoreVisuals();
-		}
-	}
-
-	private void UpdateHighScoreVisuals()
-	{
-		HighScoreText.text = PlayerPrefs.GetString("HighScore", "0");
-		HighScore2Text.text = PlayerPrefs.GetString("HighScore2", "0");
-		HighScore3Text.text = PlayerPrefs.GetString("HighScore3", "0");
-	}
-
-	private bool CheckIfHighScoreWasBested()
-	{
-		if (currentScore > long.Parse(PlayerPrefs.GetString("HighScore3")))
-		{
-			if (currentScore > long.Parse(PlayerPrefs.GetString("HighScore2")))
-			{
-				if (currentScore > long.Parse(PlayerPrefs.GetString("HighScore")))
-				{
-					PlayerPrefs.SetString("HighScore", currentScore.ToString());
-					return true;
-				}
-				PlayerPrefs.SetString("HighScore2", currentScore.ToString());
-				return true;
-			}
-			PlayerPrefs.SetString("HighScore3", currentScore.ToString());
-			return true;
-		}
-
-		return false;
 	}
 
 	private void Update()
 	{
-		if (Input.GetKeyDown("r"))
+		if (Input.GetMouseButtonUp(0))
 		{
-			//  CAREFULL WITH THIS, IT RESETS ALL HIGHSCORES
-			Debug.Log("ScoreController::Update(): You've resetted all highscores saved");
-			PlayerPrefs.DeleteAll();
+			Debug.Log("Click! add 10 000 to score.");
+			AddCasualtiesToScore(10000);
 		}
+	}
+
+	public void EndGame()
+	{
+		HighScoreTracker.Instance.EndGameNewScore(currentScore);
 	}
 }
